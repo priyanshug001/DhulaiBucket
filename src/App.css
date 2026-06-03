@@ -28,10 +28,9 @@ body {
 .navbar-toggler:focus {
   box-shadow: none !important;
 }
-
-.navbar-logo {
-  width: clamp(70px, 8vw, 100px);
-  height: auto;
+.navbar-logo{
+  width: 80px;
+  height: 80px;
   object-fit: contain;
 }
 

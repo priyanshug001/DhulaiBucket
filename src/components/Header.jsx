@@ -3,10 +3,13 @@ import logoTransparent from "../assets/images/DhulaiBucketLogoTransparent.png";
 
 const Header = () => {
   return (
-    <nav className="navbar navbar-expand-lg py-2 bg-transparent">
+    <nav
+      className="navbar navbar-expand-lg navbar-dark py-3 shadow"
+      style={{ backgroundColor: "#0B0A2A" }}
+    >
       <div className="container">
 
-        <a className="navbar-brand" href="#home">
+        <a className="navbar-brand d-flex align-items-center" href="#home">
           <img
             src={logoTransparent}
             alt="Dhulai Bucket"
@@ -30,11 +33,12 @@ const Header = () => {
           className="collapse navbar-collapse"
           id="basic-navbar-nav"
         >
-          <ul className="navbar-nav mx-auto text-center fw-medium">
+          <ul className="navbar-nav mx-auto">
 
             <li className="nav-item">
               <a
-                className="nav-link text-primary-dark px-lg-3"
+                className="nav-link fw-semibold px-3"
+                style={{ color: "#B89AC3" }}
                 href="#home"
               >
                 Home
@@ -43,7 +47,8 @@ const Header = () => {
 
             <li className="nav-item">
               <a
-                className="nav-link text-primary-dark px-lg-3"
+                className="nav-link fw-semibold px-3"
+                style={{ color: "#B89AC3" }}
                 href="#about"
               >
                 About
@@ -52,26 +57,34 @@ const Header = () => {
 
             <li className="nav-item">
               <a
-                className="nav-link text-primary-dark px-lg-3"
-                href="#pages"
+                className="nav-link fw-semibold px-3"
+                style={{ color: "#B89AC3" }}
+                href="#services"
               >
-                Pages
+                Services
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a
+                className="nav-link fw-semibold px-3"
+                style={{ color: "#B89AC3" }}
+                href="#contact"
+              >
+                Contact
               </a>
             </li>
 
           </ul>
 
-          <div className="text-center mt-3 mt-lg-0">
-            <a
-              href="#contact"
-              className="btn btn-outline-theme"
-            >
-              Contact
-            </a>
-          </div>
 
+          <button
+            className="btn rounded-pill px-4 fw-bold text-white"
+            style={{ backgroundColor: "#B89AC3" }}
+          >
+            Book Now
+          </button>
         </div>
-
       </div>
     </nav>
   );
