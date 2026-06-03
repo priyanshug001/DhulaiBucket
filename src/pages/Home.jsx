@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
-import logom from "../assets/images/DhulaiBucketLogo.png"
+import logom from "../assets/images/DhulaiBucketLogo.png";
 
 const Home = () => {
   const services = [
@@ -19,13 +19,15 @@ const Home = () => {
         <div className="container">
           <div className="row align-items-center">
 
-            <div className="col-lg-6 mb-5 mb-lg-0">
-              <span className="badge hero-badge text-dark px-4 py-3 rounded-5 fs-6">
+            <div className="col-12 col-lg-6 text-center text-lg-start mb-5 mb-lg-0">
+
+              <span className="badge hero-badge text-dark px-4 py-3 rounded-pill">
                 Premium Laundry Service
               </span>
 
               <h1 className="hero-title mt-3">
-                DHULAI <br />
+                DHULAI
+                <br />
                 BUCKET
               </h1>
 
@@ -38,30 +40,32 @@ const Home = () => {
                 washing, folding and quick delivery service.
               </p>
 
-              <div>
-                <button className="btn btn-theme me-3 mb-2">
+              <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                <button className="btn btn-theme">
                   Get Started
                 </button>
 
-                <button className="btn btn-outline-theme mb-2">
+                <button className="btn btn-outline-theme">
                   Learn More
                 </button>
               </div>
+
             </div>
 
-            <div className="col-lg-6 position-relative text-center">
+            <div className="col-12 col-lg-6 position-relative text-center">
 
               <img
                 src={logom}
                 alt="Dhulai Bucket"
-                className="hero-logo img-fluid"
+                className="hero-logo img-fluid rounded-circle"
               />
 
               <div
-                className="card floating-card position-absolute top-0 end-0 shadow-sm border-0 rounded-pill px-3 py-2 d-none d-md-block"
+                className="card floating-card position-absolute shadow-sm border-0 rounded-pill px-3 py-2 d-none d-lg-block"
               >
                 <div className="d-flex align-items-center">
-                  <i className="bi bi-truck fs-4 text-primary-light me-2"></i>
+
+                  <i className="fas fa-truck text-premium-light me-2"></i>
 
                   <div className="text-start">
                     <strong className="text-primary-dark d-block">
@@ -69,20 +73,22 @@ const Home = () => {
                     </strong>
 
                     <small className="text-muted">
-                      Doorstep service
+                      Doorstep Service
                     </small>
                   </div>
+
                 </div>
               </div>
 
             </div>
+
           </div>
         </div>
       </section>
 
       {/* Services */}
       <section className="py-5 text-center" id="service">
-        <div className="container py-5">
+        <div className="container py-lg-5">
 
           <h2 className="display-5 fw-bold text-primary-light mb-5">
             Our Services
@@ -91,26 +97,24 @@ const Home = () => {
           <div className="row">
 
             {services.map((service, idx) => (
-              <div className="col-lg-3 col-md-6 mb-4" key={idx}>
+              <div
+                className="col-12 col-sm-6 col-lg-3 mb-4"
+                key={idx}
+              >
                 <div className="card service-card h-100 p-4 shadow-sm border-0">
 
                   <div className="card-body">
 
-                    <div
-                      className="rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
-                      style={{
-                        width: "100px",
-                        height: "100px",
-                        backgroundColor: "#B89AC320"
-                      }}
-                    >
+                    <div className="service-icon rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4">
+
                       <i
                         className={`bi ${service.icon}`}
                         style={{
                           fontSize: "2.5rem",
-                          color: "#0B0A2A"
+                          color: "#0B0A2A",
                         }}
                       ></i>
+
                     </div>
 
                     <h5 className="card-title fw-bold text-primary-dark">
@@ -131,6 +135,7 @@ const Home = () => {
                     </a>
 
                   </div>
+
                 </div>
               </div>
             ))}
@@ -145,14 +150,22 @@ const Home = () => {
 
           <div className="row align-items-center">
 
-            <div className="col-lg-5 text-center mb-4 mb-lg-0">
+            <div className="col-12 col-lg-5 text-center mb-4 mb-lg-0">
+
               <div className="worker-card">
-                <i className="bi bi-droplet-half fs-1"></i>
-                <h4 className="mt-3">Fresh Clothes, Zero Stress</h4>
+
+                <i className="bi bi-droplet-half"></i>
+
+                <h4 className="mt-3">
+                  Fresh Clothes, Zero Stress
+                </h4>
+
               </div>
+
             </div>
 
-            <div className="col-lg-7">
+            <div className="col-12 col-lg-7 text-center text-lg-start">
+
               <h2 className="display-4 fw-bold text-primary-light mb-4">
                 Getting Tired
                 <br />
@@ -172,30 +185,31 @@ const Home = () => {
               <button className="btn btn-theme">
                 Call Us Now
               </button>
+
             </div>
 
           </div>
+
         </div>
       </section>
 
       {/* FAQ */}
       <section className="py-5 mb-5">
+
         <div className="container">
 
           <div className="row align-items-center">
 
-            <div className="col-lg-6">
+            <div className="col-12 col-lg-6 mb-4 mb-lg-0">
 
               <h2 className="display-5 fw-bold text-primary-light mb-4">
                 Frequently Asked Question
               </h2>
 
-              <div
-                className="accordion"
-                id="faqAccordion"
-              >
+              <div className="accordion" id="faqAccordion">
 
                 <div className="accordion-item">
+
                   <h2 className="accordion-header">
 
                     <button
@@ -226,18 +240,16 @@ const Home = () => {
 
             </div>
 
-            <div className="col-lg-6 text-center">
-              <i
-                className="bi bi-question-circle"
-                style={{
-                  fontSize: "8rem",
-                  color: "#B89AC3"
-                }}
-              ></i>
+            <div className="col-12 col-lg-6 text-center">
+
+              <i className="bi bi-question-circle faq-icon"></i>
+
             </div>
 
           </div>
+
         </div>
+
       </section>
     </>
   );
