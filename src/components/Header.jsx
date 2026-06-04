@@ -3,90 +3,61 @@ import logoTransparent from "../assets/images/DhulaiBucketLogoTransparent.png";
 
 const Header = () => {
   return (
-    <nav
-      className="navbar navbar-expand-lg navbar-dark py-3 shadow"
-      style={{ backgroundColor: "#0B0A2A" }}
-    >
-      <div className="container">
-
-        <a className="navbar-brand d-flex align-items-center" href="#home">
-          <img
-            src={logoTransparent}
-            alt="Dhulai Bucket"
-            className="navbar-logo"
-          />
-        </a>
-
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#basic-navbar-nav"
-          aria-controls="basic-navbar-nav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-
-        <div
-          className="collapse navbar-collapse"
-          id="basic-navbar-nav"
-        >
-          <ul className="navbar-nav mx-auto">
-
-            <li className="nav-item">
-              <a
-                className="nav-link fw-semibold px-3"
-                style={{ color: "#B89AC3" }}
-                href="#home"
-              >
-                Home
-              </a>
-            </li>
-
-            <li className="nav-item">
-              <a
-                className="nav-link fw-semibold px-3"
-                style={{ color: "#B89AC3" }}
-                href="#about"
-              >
-                About
-              </a>
-            </li>
-
-            <li className="nav-item">
-              <a
-                className="nav-link fw-semibold px-3"
-                style={{ color: "#B89AC3" }}
-                href="#services"
-              >
-                Services
-              </a>
-            </li>
-
-            <li className="nav-item">
-              <a
-                className="nav-link fw-semibold px-3"
-                style={{ color: "#B89AC3" }}
-                href="#contact"
-              >
-                Contact
-              </a>
-            </li>
-
-          </ul>
-
+    <>
+      <nav className="navbar navbar-expand-lg fixed-top custom-navbar">
+        <div className="container">
+          <a className="navbar-brand" href="#home">
+            <div className="logo-icon">
+              <img src={logoTransparent} alt="Dhulai Bucket" className="nav-logo" />
+            </div>
+          </a>
 
           <button
-            className="btn rounded-pill px-4 fw-bold text-white"
-            style={{ backgroundColor: "#B89AC3" }}
+            className="navbar-toggler bg-light"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
           >
-            Book Now
+            <span className="navbar-toggler-icon"></span>
           </button>
+
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav ms-auto align-items-lg-center gap-lg-4">
+              <li className="nav-item">
+                <a className="nav-link active" href="#home">
+                  Home
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#about">
+                  About
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#services">
+                  Services
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#pricing">
+                  Pricing
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#contact">
+                  Contact
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="btn book-btn" href="#booking">
+                  Book Now
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 };
 

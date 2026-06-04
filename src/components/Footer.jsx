@@ -1,79 +1,70 @@
 import React from "react";
-import logo from "../assets/images/DhulaiBucketLogoTransparent.png";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 
 const Footer = () => {
-return ( 
-<footer className="bg-primary-dark footer-section pt-5 pb-3"> 
-    <div className="container">
-    <div className="row mb-4">
-      <div className="col-lg-4 mb-4">
-        <div className="mb-4">
-          <img
-            src={logo}
-            alt="Dhulai Bucket"
-            height="70"
-          />
+  return (
+    <>
+      {/* Footer */}
+      <footer className="footer" id="contact">
+        <div className="container">
+          <div className="row g-4">
+            <div className="col-lg-4">
+              <h3>DHULAI BUCKET</h3>
+              <p>
+                Professional laundry and dry cleaning service at your doorstep.
+              </p>
+              <div className="social-icons">
+                <FaFacebookF />
+                <FaInstagram />
+                <FaTwitter />
+              </div>
+            </div>
+
+            <div className="col-lg-2">
+              <h5>Quick Links</h5>
+              <a href="#home">Home</a>
+              <a href="#about">About</a>
+              <a href="#services">Services</a>
+              <a href="#booking">Booking</a>
+            </div>
+
+            <div className="col-lg-3">
+              <h5>Services</h5>
+              <a href="#services">Wash & Fold</a>
+              <a href="#services">Dry Cleaning</a>
+              <a href="#services">Ironing</a>
+              <a href="#services">Express Laundry</a>
+            </div>
+
+            <div className="col-lg-3">
+              <h5>Contact Info</h5>
+              <p>
+                <FaPhoneAlt /> +91 98765 43210
+              </p>
+              <p>
+                <FaEnvelope /> support@dhulaibucket.com
+              </p>
+              <p>
+                <FaMapMarkerAlt /> India
+              </p>
+            </div>
+          </div>
+
+          <hr />
+          <p className="copyright">
+            © 2026 Dhulai Bucket. All Rights Reserved.
+          </p>
         </div>
-        <p className="text-white-50 pe-lg-4">
-          Premium laundry and dry cleaning service for modern busy life.
-        </p>
-      </div>
-      <div className="col-lg-2 col-md-4 mb-4">
-        <h5 className="text-white mb-4">Company</h5>
-
-        <ul className="list-unstyled">
-          <li className="mb-2">
-            <a href="#home" className="text-decoration-none text-primary-light">Home</a>
-          </li>
-          <li className="mb-2">
-            <a href="#about" className="text-decoration-none text-primary-light">About</a>
-          </li>
-          <li className="mb-2">
-            <a href="#service" className="text-decoration-none text-primary-light"> Service</a>
-          </li>
-          <li className="mb-2">
-            <a href="#contact" className="text-decoration-none text-primary-light">Contact</a>
-          </li>
-        </ul>
-      </div>
-      <div className="col-lg-2 col-md-4 mb-4">
-        <h5 className="text-white mb-4">Further Links</h5>
-        <ul className="list-unstyled">
-          <li className="mb-2">
-            <a href="#terms" className="text-decoration-none text-primary-light">Terms</a>
-          </li>
-          <li className="mb-2">
-            <a href="#news" className="text-decoration-none text-primary-light">News</a>
-          </li>
-          <li className="mb-2">
-            <a href="#recruitment" className="text-decoration-none text-primary-light">Recruitment</a>
-          </li>
-        </ul>
-      </div>
-      <div className="col-lg-4 col-md-4">
-        <h5 className="text-white mb-4">Get In Touch</h5>
-
-        <p className="mb-2 text-white-50">
-          <i className="fas fa-location-dot text-primary-light me-2"></i>
-          India
-        </p>
-        <p className="mb-2 text-white-50">
-          <i className="fas fa-phone text-primary-light me-2"></i>
-          +91 98765 43210
-        </p>
-        <p className="mb-2 text-white-50">
-          <i className="fas fa-envelope text-primary-light me-2"></i>
-          support@dhulaibucket.com
-        </p>
-      </div>
-    </div>
-    <hr className="border-secondary" />
-    <div className="text-center mt-3 text-white-50 small">
-      Copyright © 2026 Dhulai Bucket | All Rights Reserved
-    </div>
-  </div>
-</footer>
-);
+      </footer>
+    </>
+  );
 };
 
 export default Footer;
