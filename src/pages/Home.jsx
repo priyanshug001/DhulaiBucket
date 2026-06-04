@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
-import logom from "../assets/images/DhulaiBucketLogo.png"
+import logom from "../assets/images/DhulaiBucketLogo.png";
 
 const Home = () => {
   const services = [
@@ -18,7 +18,6 @@ const Home = () => {
       <section className="hero-section py-5" id="home">
         <div className="container">
           <div className="row align-items-center">
-
             <div className="col-lg-6 mb-5 mb-lg-0">
               <span className="badge hero-badge text-dark px-4 py-3 rounded-5 fs-6">
                 Premium Laundry Service
@@ -39,9 +38,7 @@ const Home = () => {
               </p>
 
               <div>
-                <button className="btn btn-theme me-3 mb-2">
-                  Get Started
-                </button>
+                <button className="btn btn-theme me-3 mb-2">Get Started</button>
 
                 <button className="btn btn-outline-theme mb-2">
                   Learn More
@@ -50,16 +47,13 @@ const Home = () => {
             </div>
 
             <div className="col-lg-6 position-relative text-center">
-
               <img
                 src={logom}
                 alt="Dhulai Bucket"
                 className="hero-logo img-fluid"
               />
 
-              <div
-                className="card floating-card position-absolute top-0 end-0 shadow-sm border-0 rounded-pill px-3 py-2 d-none d-md-block"
-              >
+              <div className="card floating-card position-absolute top-0 end-0 shadow-sm border-0 rounded-pill px-3 py-2 d-none d-md-block">
                 <div className="d-flex align-items-center">
                   <i className="bi bi-truck fs-4 text-primary-light me-2"></i>
 
@@ -68,13 +62,10 @@ const Home = () => {
                       Free Delivery
                     </strong>
 
-                    <small className="text-muted">
-                      Doorstep service
-                    </small>
+                    <small className="text-muted">Doorstep service</small>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -83,32 +74,28 @@ const Home = () => {
       {/* Services */}
       <section className="py-5 text-center" id="service">
         <div className="container py-5">
-
           <h2 className="display-5 fw-bold text-primary-light mb-5">
             Our Services
           </h2>
 
           <div className="row">
-
             {services.map((service, idx) => (
               <div className="col-lg-3 col-md-6 mb-4" key={idx}>
                 <div className="card service-card h-100 p-4 shadow-sm border-0">
-
                   <div className="card-body">
-
                     <div
                       className="rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
                       style={{
                         width: "100px",
                         height: "100px",
-                        backgroundColor: "#B89AC320"
+                        backgroundColor: "#B89AC320",
                       }}
                     >
                       <i
                         className={`bi ${service.icon}`}
                         style={{
                           fontSize: "2.5rem",
-                          color: "#0B0A2A"
+                          color: "#0B0A2A",
                         }}
                       ></i>
                     </div>
@@ -129,12 +116,10 @@ const Home = () => {
                       <i className="bi bi-arrow-right me-1"></i>
                       Learn More
                     </a>
-
                   </div>
                 </div>
               </div>
             ))}
-
           </div>
         </div>
       </section>
@@ -142,9 +127,7 @@ const Home = () => {
       {/* About */}
       <section className="py-5" id="about">
         <div className="container">
-
           <div className="row align-items-center">
-
             <div className="col-lg-5 text-center mb-4 mb-lg-0">
               <div className="worker-card">
                 <i className="bi bi-droplet-half fs-1"></i>
@@ -160,20 +143,17 @@ const Home = () => {
               </h2>
 
               <p className="text-muted mb-4">
-                We make laundry simple with doorstep pickup,
-                safe washing process and clean packaging.
+                We make laundry simple with doorstep pickup, safe washing
+                process and clean packaging.
               </p>
 
               <p className="text-muted mb-4">
-                Perfect for students, working professionals,
-                families and busy lifestyle users.
+                Perfect for students, working professionals, families and busy
+                lifestyle users.
               </p>
 
-              <button className="btn btn-theme">
-                Call Us Now
-              </button>
+              <button className="btn btn-theme">Call Us Now</button>
             </div>
-
           </div>
         </div>
       </section>
@@ -181,23 +161,15 @@ const Home = () => {
       {/* FAQ */}
       <section className="py-5 mb-5">
         <div className="container">
-
           <div className="row align-items-center">
-
             <div className="col-lg-6">
-
               <h2 className="display-5 fw-bold text-primary-light mb-4">
                 Frequently Asked Question
               </h2>
 
-              <div
-                className="accordion"
-                id="faqAccordion"
-              >
-
+              <div className="accordion" id="faqAccordion">
                 <div className="accordion-item">
                   <h2 className="accordion-header">
-
                     <button
                       className="accordion-button"
                       type="button"
@@ -206,7 +178,6 @@ const Home = () => {
                     >
                       How does laundry pickup work?
                     </button>
-
                   </h2>
 
                   <div
@@ -215,15 +186,12 @@ const Home = () => {
                     data-bs-parent="#faqAccordion"
                   >
                     <div className="accordion-body">
-                      You book a pickup, our team collects clothes,
-                      cleans them and delivers them back.
+                      You book a pickup, our team collects clothes, cleans them
+                      and delivers them back.
                     </div>
                   </div>
-
                 </div>
-
               </div>
-
             </div>
 
             <div className="col-lg-6 text-center">
@@ -231,11 +199,10 @@ const Home = () => {
                 className="bi bi-question-circle"
                 style={{
                   fontSize: "8rem",
-                  color: "#B89AC3"
+                  color: "#B89AC3",
                 }}
               ></i>
             </div>
-
           </div>
         </div>
       </section>
