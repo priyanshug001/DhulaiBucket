@@ -83,18 +83,24 @@ body {
   line-height: 0.95;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: #B89AC3;
+
+  /* Text Color */
+  color: #C7B0D8;
+
+  /* Exact Logo Style Shadow */
   text-shadow:
-    4px 4px 0px #0B0A2A,
-    8px 8px 0px rgba(11, 10, 42, .15);
+    3px 0 #241B63,
+    3px 3px #241B63,
+    6px 6px #120D3D,
+    8px 8px 0 rgba(18, 13, 61, 0.25);
+
+  -webkit-text-stroke: 1px rgba(255,255,255,0.15);
 }
 
 .hero-logo {
   width: 420px;
   height: 420px !important;
   object-fit: cover;
-  border: 8px solid #B89AC3;
-  box-shadow: 0 15px 40px rgba(184, 154, 195, .35);
 }
 
 .service-icon {
@@ -127,7 +133,7 @@ body {
 
   .hero-logo {
     width: 280px;
-    height: 280px;
+    height: 280px !important;
     margin-top: 25px;
   }
 

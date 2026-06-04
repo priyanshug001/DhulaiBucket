@@ -1,22 +1,23 @@
 import React from "react";
 import Header from "../components/Header";
-import logom from "../assets/images/DhulaiBucketLogo.png";
+import logom from "../assets/images/image (2).png";
+import about from "../assets/images/aboutImage.png"
+import Footer from "../components/Footer";
 
 const Home = () => {
   const services = [
-    { title: "Laundry Pickup", icon: "bi-truck" },
-    { title: "Wash And Fold", icon: "bi-basket2-fill" },
-    { title: "Bulk Discount", icon: "bi-tags-fill" },
-    { title: "Dry Cleaning", icon: "bi-shield-check" },
+    { title: "Laundry Pickup", icon: "fa-truck" },
+    { title: "Wash And Fold", icon: "fa-shirt" },
+    { title: "Bulk Discount", icon: "fa-tags" },
+    { title: "Dry Cleaning", icon: "fa-soap" },
   ];
 
   return (
     <>
       <Header />
-
       {/* Hero Section */}
-      <section className="hero-section py-5" id="home">
-        <div className="container">
+      <div className="container">
+        <section className="hero-section my-4 pt-4" id="home">
           <div className="row align-items-center">
 
             <div className="col-12 col-lg-6 text-center text-lg-start mb-5 mb-lg-0">
@@ -61,7 +62,7 @@ const Home = () => {
               />
 
               <div
-                className="card floating-card position-absolute shadow-sm border-0 rounded-pill px-3 py-2 d-none d-lg-block"
+                className="card floating-card position-absolute shadow-sm border-0 rounded-pill px-3 py-2 d-none d-lg-block top-0 end-0"
               >
                 <div className="d-flex align-items-center">
 
@@ -83,13 +84,10 @@ const Home = () => {
             </div>
 
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Services */}
-      <section className="py-5 text-center" id="service">
-        <div className="container py-lg-5">
-
+        {/* Services */}
+        <section className="py-5 text-center" id="service">
           <h2 className="display-5 fw-bold text-primary-light mb-5">
             Our Services
           </h2>
@@ -103,12 +101,12 @@ const Home = () => {
               >
                 <div className="card service-card h-100 p-4 shadow-sm border-0">
 
-                  <div className="card-body">
+                  <div className="card-body text-center">
 
                     <div className="service-icon rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4">
 
                       <i
-                        className={`bi ${service.icon}`}
+                        className={`fas ${service.icon}`}
                         style={{
                           fontSize: "2.5rem",
                           color: "#0B0A2A",
@@ -130,7 +128,7 @@ const Home = () => {
                       href="#learn"
                       className="text-primary-light text-decoration-none fw-bold"
                     >
-                      <i className="bi bi-arrow-right me-1"></i>
+                      <i className="fas fa-arrow-right me-1"></i>
                       Learn More
                     </a>
 
@@ -141,25 +139,21 @@ const Home = () => {
             ))}
 
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* About */}
-      <section className="py-5" id="about">
-        <div className="container">
-
+        {/* About */}
+        <section className="py-5" id="about">
           <div className="row align-items-center">
 
             <div className="col-12 col-lg-5 text-center mb-4 mb-lg-0">
 
               <div className="worker-card">
 
-                <i className="bi bi-droplet-half"></i>
-
-                <h4 className="mt-3">
-                  Fresh Clothes, Zero Stress
-                </h4>
-
+                <img
+                  src={about}
+                  alt="Dhulai Bucket"
+                  className="img-fluid"
+                />
               </div>
 
             </div>
@@ -189,15 +183,10 @@ const Home = () => {
             </div>
 
           </div>
+        </section>
 
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-5 mb-5">
-
-        <div className="container">
-
+        {/* FAQ */}
+        <section className="py-5 mb-5">
           <div className="row align-items-center">
 
             <div className="col-12 col-lg-6 mb-4 mb-lg-0">
@@ -248,9 +237,9 @@ const Home = () => {
 
           </div>
 
-        </div>
-
-      </section>
+        </section>
+      </div>
+      <Footer />
     </>
   );
 };
