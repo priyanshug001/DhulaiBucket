@@ -11,6 +11,14 @@
   box-sizing: border-box;
 }
 
+.bg-lavender {
+  background: var(--lavender);
+}
+
+.text-lavender {
+  color: var(--lavender);
+}
+
 .home-page {
   font-family: "Poppins", sans-serif;
   color: var(--navy);
@@ -18,31 +26,14 @@
 }
 
 /* Navbar */
-.custom-navbar {
-  padding: 18px 0;
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 10px 30px rgba(11, 10, 42, 0.08);
-}
-
-.brand-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-weight: 800;
-  color: var(--navy) !important;
-  letter-spacing: 1px;
-}
-
-.logo-icon img {
+.nav-logo {
   width: 48px;
   height: 50px;
+  object-fit: contain;
 }
 
 .nav-link {
   color: var(--navy) !important;
-  font-weight: 600;
-  transition: 0.3s;
 }
 
 .nav-link:hover,
@@ -51,26 +42,18 @@
 }
 
 .book-btn {
-  background: var(--white);
-  color: var(--lavender);
   border: 2px solid var(--lavender);
-  border-radius: 40px;
-  padding: 12px 28px;
-  font-weight: 700;
   box-shadow: 0 5px 0 var(--lavender);
 }
 
 .book-btn:hover {
   background: var(--lavender);
-  color: var(--white);
+  color: #fff;
 }
 
 /* Hero */
 .hero-section {
-  position: relative;
-  min-height: 100vh;
   background: linear-gradient(135deg, #f8fbff, #eef2f8);
-  padding-top: 90px;
 }
 
 .hero-left {
@@ -79,11 +62,8 @@
 
 .hero-left h1 {
   font-size: clamp(3.2rem, 7vw, 6.8rem);
-  font-weight: 900;
   line-height: 1.05;
-  color: var(--lavender);
   text-shadow: 5px 5px 0 rgba(11, 10, 42, 0.15);
-  margin-bottom: 28px;
 }
 
 .hero-left p {
@@ -93,29 +73,18 @@
   margin-bottom: 35px;
 }
 
-.hero-buttons {
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
 .primary-btn,
 .secondary-btn {
-  padding: 14px 36px;
-  border-radius: 40px;
-  font-weight: 700;
   position: relative;
   overflow: hidden;
 }
 
 .primary-btn {
-  background: var(--lavender);
   color: var(--white);
   box-shadow: 0 6px 0 var(--navy);
 }
 
 .secondary-btn {
-  background: var(--white);
   color: var(--navy);
   border: 2px solid var(--lavender);
   box-shadow: 0 6px 0 var(--lavender);
@@ -126,32 +95,18 @@
   transform: translateY(-3px);
 }
 
-/* Hero Image */
-.hero-right {
-  position: relative;
-}
-
 .hero-image-box {
-  position: relative;
   min-height: 620px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .hero-img {
-  position: relative;
   z-index: 3;
   width: 150%;
-  border-radius: 40px;
   object-fit: cover;
 }
 
 .blob {
-  position: absolute;
-  background: var(--lavender);
   opacity: 0.35;
-  border-radius: 50%;
   filter: blur(1px);
   z-index: 1;
 }
@@ -173,26 +128,11 @@
 }
 
 .floating-card {
-  position: absolute;
   z-index: 5;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  background: var(--white);
-  padding: 10px 15px;
-  border-radius: 50px;
-  box-shadow: 0 15px 35px rgba(11, 10, 42, 0.15);
   animation: float 3s ease-in-out infinite;
 }
 
-.floating-card h5 {
-  margin: 0;
-  font-weight: 800;
-  font-size: 15px;
-}
-
 .floating-card p {
-  margin: 0;
   color: #666;
   font-size: 12px;
 }
@@ -200,11 +140,8 @@
 .card-icon {
   width: 30px;
   height: 30px;
-  border-radius: 50%;
   background: var(--lavender);
-  color: var(--white);
-  display: grid;
-  place-items: center;
+  color: #fff;
   font-size: 15px;
 }
 
@@ -215,7 +152,7 @@
 
 .card-two {
   right: 0;
-  top: 310px;
+  top: 290px;
 }
 
 .card-three {
@@ -240,15 +177,6 @@
 }
 
 /* Sections */
-.section-padding {
-  padding: 90px 0;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 55px;
-}
-
 .section-title h2 {
   font-size: 2.6rem;
   font-weight: 900;
@@ -264,11 +192,8 @@
 .feature-card,
 .service-card,
 .testimonial-card {
-  height: 100%;
   background: var(--white);
   padding: 35px 28px;
-  border-radius: 28px;
-  text-align: center;
   box-shadow: 0 12px 35px rgba(11, 10, 42, 0.08);
   transition: 0.3s;
 }
@@ -284,11 +209,6 @@
 .service-card svg {
   width: 70px;
   height: 70px;
-  background: var(--lavender);
-  color: var(--white);
-  padding: 18px;
-  border-radius: 50%;
-  margin-bottom: 20px;
 }
 
 .feature-card h4,
@@ -315,15 +235,8 @@
 }
 
 .stat-box h2 {
-  color: var(--lavender);
   font-size: 3rem;
-  font-weight: 900;
-}
-
-.stat-box p {
-  margin: 0;
-  font-weight: 600;
-}
+} 
 
 /* Testimonials */
 .testimonial-card h5 {
@@ -333,7 +246,6 @@
 }
 
 .stars {
-  color: var(--lavender);
   letter-spacing: 3px;
 }
 
@@ -374,7 +286,6 @@
 .social-icons svg {
   width: 42px;
   height: 42px;
-  background: var(--lavender);
   padding: 12px;
   border-radius: 50%;
 }

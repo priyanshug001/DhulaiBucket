@@ -21,9 +21,9 @@ const Footer = () => {
                 Professional laundry and dry cleaning service at your doorstep.
               </p>
               <div className="social-icons">
-                <FaFacebookF />
-                <FaInstagram />
-                <FaTwitter />
+                <FaFacebookF  className="bg-lavender"/>
+                <FaInstagram  className="bg-lavender"/>
+                <FaTwitter  className="bg-lavender"/>
               </div>
             </div>
 
