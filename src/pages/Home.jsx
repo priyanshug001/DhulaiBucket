@@ -150,11 +150,12 @@ const Home = () => {
                 ))}
               </div>
             </section>
-
-            <section
-              id="app"
-              className="download-app-section bg-light overflow-hidden py-5"
-            >
+          </div>
+          <section
+            id="app"
+            className="download-app-section bg-light overflow-hidden py-5"
+          >
+            <div className="container">
               <div className="row align-items-center">
 
                 {/* Left Side */}
@@ -272,26 +273,9 @@ const Home = () => {
 
                 </div>
               </div>
-            </section>
-          </div>
-          {/* Stats */}
-          <section className="stats-section bg-navy text-white">
-            <div className="row g-4 text-center">
-              {[
-                ["10000+", "Clothes Cleaned"],
-                ["5000+", "Happy Customers"],
-                ["24/7", "Support"],
-                ["99%", "Satisfaction"],
-              ].map((stat, index) => (
-                <div className="col-6 col-lg-3" key={index}>
-                  <div className="stat-box">
-                    <h2 className="text-lavender fw-bolder">{stat[0]}</h2>
-                    <p className="m-0 fw-semibold">{stat[1]}</p>
-                  </div>
-                </div>
-              ))}
             </div>
           </section>
+
         </div>
       </div>
       <Footer />

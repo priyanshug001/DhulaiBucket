@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chango&family=Luckiest+Guy&display=swap');
+
 :root {
   --navy: #0b0a2a;
   --lavender: #b89ac3;
@@ -10,25 +11,28 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Luckiest Guy", cursive;
+  font-family: "Chango", sans-serif;
 }
+
 /*BACKGROUND-COLOR-CSS*/
 .bg-lavender {
   background: var(--lavender) !important;
 }
 
-.bg-navy{
+.bg-navy {
   background-color: var(--navy) !important;
 
 }
+
 /*TEXT-COLOR-CSS*/
 .text-lavender {
   color: var(--lavender) !important;
 }
 
-.text-navy{
+.text-navy {
   color: var(--navy) !important;
 }
+
 .home-page {
   overflow-x: hidden;
 }
@@ -57,7 +61,7 @@
 
 /* Hero */
 .hero-section {
-  background: linear-gradient(135deg, #f8fbff, #eef2f8);
+  background: linear-gradient(135deg, #f8f6fb, #f2edf7);
 }
 
 .hero-left {
@@ -71,7 +75,6 @@
 }
 
 .hero-left p {
-  color: #4b4b60;
   max-width: 520px;
   margin-bottom: 35px;
 }
@@ -254,22 +257,10 @@
     height: 220px;
   }
 }
-/* Stats */
-.stats-section {
-  padding: 70px 0;
-}
-
-.stat-box h2 {
-  font-size: 3rem;
-}
 
 /* Footer */
-.footer {
-  padding: 70px 0 25px;
-}
-
-.footer p {
-  color: #ddd;
+.logo {
+  width: 40%;
 }
 
 .social-icons {
@@ -283,16 +274,6 @@
   height: 42px;
   padding: 12px;
   border-radius: 50%;
-}
-
-.footer hr {
-  border-color: rgba(255, 255, 255, 0.15);
-  margin-top: 45px;
-}
-
-.copyright {
-  text-align: center;
-  margin: 0;
 }
 
 /* Animations */
@@ -416,6 +397,7 @@
 .service-link:hover {
   color: #0b0a2a;
 }
+
 /*ABOUT CSS*/
 .about-splash {
   position: absolute;
