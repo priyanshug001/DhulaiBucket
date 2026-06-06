@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Chango&family=Luckiest+Guy&display=swap');
 
 :root {
-  --navy: #0b0a2a;
+  --navy: #0B0A2A ;
   --lavender: #b89ac3;
   --white: #ffffff;
   --light-bg: #f5f7fb;
@@ -58,7 +58,21 @@
   background: var(--lavender);
   color: #fff;
 }
+.active-link {
+  color: #b89ac3 !important;
+  position: relative;
+}
 
+.active-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 3px;
+  background: #b89ac3;
+  border-radius: 10px;
+}
 /* Hero */
 .hero-section {
   background: linear-gradient(135deg, #f8f6fb, #f2edf7);
@@ -203,59 +217,8 @@
 }
 
 .feature-card p,
-.service-card p,
-.testimonial-card p {
+.service-card p {
   color: #666;
-}
-
-/*MOBILE-APP-CSS*/
-.download-splash {
-  position: absolute;
-  width: 620px;
-  height: 320px;
-  background: white;
-  border-radius: 45% 55% 60% 40% / 55% 40% 60% 45%;
-  left: 40px;
-  top: 85px;
-  z-index: 1;
-}
-
-.download-splash::before,
-.download-splash::after {
-  content: "";
-  position: absolute;
-  background: white;
-  border-radius: 50%;
-}
-
-.download-splash::before {
-  width: 70px;
-  height: 35px;
-  left: -55px;
-  top: 90px;
-}
-
-.download-splash::after {
-  width: 95px;
-  height: 42px;
-  right: -65px;
-  top: 155px;
-}
-
-@media (max-width: 991px) {
-  .download-splash {
-    width: 520px;
-    height: 280px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
-@media (max-width: 576px) {
-  .download-splash {
-    width: 360px;
-    height: 220px;
-  }
 }
 
 /* Footer */
@@ -263,18 +226,18 @@
   width: 40%;
 }
 
-.social-icons {
-  display: flex;
-  gap: 14px;
-  margin-top: 20px;
-}
-
-.social-icons svg {
+.social-icons a {
   width: 42px;
   height: 42px;
   padding: 12px;
-  border-radius: 50%;
+  transition: all 0.3s ease;
 }
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+  color: #fff;
+}
+
 
 /* Animations */
 @keyframes float {
@@ -396,54 +359,4 @@
 
 .service-link:hover {
   color: #0b0a2a;
-}
-
-/*ABOUT CSS*/
-.about-splash {
-  position: absolute;
-  top: -120px;
-  width: 630px;
-  height: 380px;
-  background: rgba(184, 154, 195, 0.35);
-  border-radius: 45% 55% 65% 35% / 40% 45% 55% 60%;
-  z-index: 1;
-}
-
-.about-splash::before,
-.about-splash::after {
-  content: "";
-  position: absolute;
-  background: #f8f9fa;
-  border-radius: 50%;
-}
-
-.about-splash::before {
-  width: 130px;
-  height: 190px;
-  left: 170px;
-  bottom: -95px;
-}
-
-.about-splash::after {
-  width: 110px;
-  height: 230px;
-  right: 110px;
-  bottom: -120px;
-}
-
-@media (max-width: 991px) {
-  .about-splash {
-    width: 620px;
-    height: 420px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
-@media (max-width: 576px) {
-  .about-splash {
-    width: 420px;
-    height: 300px;
-    top: -70px;
-  }
 }

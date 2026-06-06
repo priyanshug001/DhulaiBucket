@@ -1,22 +1,27 @@
 import React from "react";
 import logoTransparent from "../assets/images/DhulaiBucketLogoTransparent.png";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
+  const navLinkClass = ({ isActive }) =>
+    `nav-link text-navy fw-semibold ${
+      isActive ? "active-link" : ""
+    }`;
+
   return (
     <>
       <nav
-        className="navbar navbar-expand-lg fixed-top bg-white bg-opacity-90 shadow-sm py-2"
+        className="navbar navbar-expand-lg fixed-top bg-white bg-opacity-90 shadow-sm py-2 rounded-bottom-5"
         style={{ backdropFilter: "blur(12px)" }}
       >
         <div className="container">
-          <Link className="navbar-brand" to="/home">
+          <NavLink className="navbar-brand" to="/home">
             <img
               src={logoTransparent}
               alt="Dhulai Bucket"
               className="nav-logo"
             />
-          </Link>
+          </NavLink>
 
           <button
             className="navbar-toggler"
@@ -30,42 +35,49 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto align-items-lg-center gap-lg-4">
               <li className="nav-item">
-                <Link className="nav-link text-navy fw-semibold active" to="/home">
+                <NavLink
+                  to="/home"
+                  end
+                  className={navLinkClass}
+                >
                   Home
-                </Link>
+                </NavLink>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link text-navy fw-semibold" to="/aboutsection">
+                <NavLink
+                  to="/aboutsection"
+                  className={navLinkClass}
+                >
                   About
-                </Link>
+                </NavLink>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link text-navy fw-semibold" to="/services">
+                <NavLink
+                  to="/services"
+                  className={navLinkClass}
+                >
                   Services
-                </Link>
+                </NavLink>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link text-navy fw-semibold" to="/pricing">
+                <NavLink
+                  to="/pricing"
+                  className={navLinkClass}
+                >
                   Pricing
-                </Link>
+                </NavLink>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link text-navy fw-semibold" to="/contact">
-                  Contact
-                </Link>
-              </li>
-
-              <li className="nav-item">
-                <Link
+                <NavLink
                   className="btn rounded-3 fw-bold px-3 py-2 book-btn text-lavender bg-white"
                   to="/booking"
-                > 
+                >
                   Book Now
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </div>

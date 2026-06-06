@@ -8,6 +8,7 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 import logo from "../assets/images/DhulaiBucketLogo.png"
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -33,10 +34,30 @@ const Footer = () => {
               </p>
             </div>
             <div className="col-lg-4">
-              <div className="social-icons">
-                <FaFacebookF className="bg-lavender" />
-                <FaInstagram className="bg-lavender" />
-                <FaTwitter className="bg-lavender" />
+              <div className="social-icons d-flex gap-3 mt-3 justify-content-center">
+                <Link
+                  to="https://facebook.com/yourpage"
+                  target="_blank"
+                  className="bg-lavender text-white rounded-circle d-flex justify-content-center align-items-center text-decoration-none"
+                >
+                  <FaFacebookF className="fs-3"/>
+                </Link>
+
+                <Link
+                  to="https://instagram.com/yourpage"
+                  target="_blank"
+                  className="bg-lavender text-white rounded-circle d-flex justify-content-center align-items-center text-decoration-none"
+                >
+                  <FaInstagram className="fs-3"/>
+                </Link>
+
+                <Link
+                  to="https://twitter.com/yourpage"
+                  target="_blank"
+                  className="bg-lavender text-white rounded-circle d-flex justify-content-center align-items-center text-decoration-none"
+                >
+                  <FaTwitter className="fs-3"/>
+                </Link>
               </div>
             </div>
           </div>

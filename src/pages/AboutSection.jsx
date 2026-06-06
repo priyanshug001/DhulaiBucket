@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
-import workerImg from "../assets/images/image.png";
+import workerImg from "../assets/images/about.png";
+import Footer from "../components/Footer";
 
 const AboutSection = () => {
     return (
@@ -14,9 +15,6 @@ const AboutSection = () => {
                         <div className="row align-items-center">
                             {/* Image Side */}
                             <div className="col-lg-6 position-relative d-flex justify-content-center align-items-end">
-
-                                <div className="about-splash"></div>
-
                                 <img
                                     src={workerImg}
                                     alt="Laundry Worker"
@@ -32,11 +30,9 @@ const AboutSection = () => {
                             <div className="col-lg-6 px-lg-5 px-4 text-center text-lg-start">
 
                                 <h2
-                                    className="fw-black lh-1 mb-4"
+                                    className="fw-bold lh-1 mb-4 text-lavender"
                                     style={{
-                                        color: "#b89ac3",
-                                        fontSize: "clamp(52px,5.8vw,92px)",
-                                        fontWeight: "900"
+                                        fontSize: "clamp(52px,5.8vw,79px)",
                                     }}
                                 >
                                     Getting Tired <br />
@@ -56,10 +52,7 @@ const AboutSection = () => {
                                 </p>
 
                                 <button
-                                    className="btn rounded-pill px-5 py-3 fw-bold text-white"
-                                    style={{
-                                        backgroundColor: "#b89ac3"
-                                    }}
+                                    className="btn rounded-pill px-5 py-3 fw-bold text-white bg-lavender"
                                 >
                                     Book Pickup Now
                                 </button>
@@ -69,6 +62,7 @@ const AboutSection = () => {
                     </section>
                 </div>
             </div>
+            <Footer />
         </>
     );
 };

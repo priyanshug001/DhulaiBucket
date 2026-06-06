@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import logom from "../assets/images/image (2).png"
+import logom from "../assets/images/home.png"
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -127,7 +127,7 @@ const Home = () => {
             {/* Services */}
             <section className="py-4 services-section" id="services">
               <div className="section-title text-center">
-                <h2 className="text-navy">Our Services</h2>
+                <h2 className="text-navy fs-1 fw-bolder">Our Services</h2>
                 <p>Complete laundry solutions for your clothes and home fabrics.</p>
               </div>
 
@@ -137,10 +137,8 @@ const Home = () => {
                   "Dry Cleaning",
                   "Ironing",
                   "Express Laundry",
-                  "Shoe Cleaning",
-                  "Curtain Cleaning",
                 ].map((service, index) => (
-                  <div className="col-md-6 col-lg-4" key={index}>
+                  <div className="col-md-6 col-lg-3" key={index}>
                     <div className="service-card bg-white h-100 text-center rounded-3">
                       <FaTshirt className="bg-lavender text-white rounded-circle p-3 mb-4" />
                       <h4 className="fw-bold text-navy">{service}</h4>
@@ -163,7 +161,6 @@ const Home = () => {
                   className="col-lg-6 position-relative d-flex justify-content-center align-items-end mb-5 mb-lg-0"
                   style={{ minHeight: "520px" }}
                 >
-                  <div className="download-splash"></div>
 
                   <img
                     src="/images/app-worker.png"
@@ -179,16 +176,14 @@ const Home = () => {
                 {/* Right Side */}
                 <div className="col-lg-6 text-center text-lg-start">
 
-                  <span className="badge rounded-pill px-4 py-3 fs-6 fw-bold text-dark bg-white shadow-sm mb-4">
+                  <span className="badge rounded-pill px-4 py-3 fs-6 fw-bold text-navy bg-white shadow-sm mb-4">
                     10,000+ Downloads
                   </span>
 
                   <h2
-                    className="fw-black lh-1 mb-4"
+                    className="fw-bold lh-1 mb-4 fw-bold text-navy"
                     style={{
-                      color: "#0b0a2a",
                       fontSize: "clamp(52px,5vw,86px)",
-                      fontWeight: "900"
                     }}
                   >
                     Download <br />
@@ -206,25 +201,25 @@ const Home = () => {
                   <div className="row g-3 mb-4">
 
                     <div className="col-md-6">
-                      <span className="fw-semibold">
+                      <span className="fw-semibold text-navy">
                         ✓ One-Tap Pickup Booking
                       </span>
                     </div>
 
                     <div className="col-md-6">
-                      <span className="fw-semibold">
+                      <span className="fw-semibold text-navy">
                         ✓ Real-Time Order Tracking
                       </span>
                     </div>
 
                     <div className="col-md-6">
-                      <span className="fw-semibold">
+                      <span className="fw-semibold text-navy">
                         ✓ Secure Online Payments
                       </span>
                     </div>
 
                     <div className="col-md-6">
-                      <span className="fw-semibold">
+                      <span className="fw-semibold text-navy">
                         ✓ Exclusive App Discounts
                       </span>
                     </div>
@@ -242,11 +237,11 @@ const Home = () => {
                       <span className="fs-3">▶</span>
 
                       <div className="text-start">
-                        <small className="d-block">
+                        <small className="d-block text-navy">
                           GET IT ON
                         </small>
 
-                        <strong>
+                        <strong className="text-navy">
                           Google Play
                         </strong>
                       </div>
@@ -259,11 +254,11 @@ const Home = () => {
                       <span className="fs-3"></span>
 
                       <div className="text-start">
-                        <small className="d-block">
+                        <small className="d-block text-navy">
                           Download on the
                         </small>
 
-                        <strong>
+                        <strong className="text-navy">
                           App Store
                         </strong>
                       </div>
