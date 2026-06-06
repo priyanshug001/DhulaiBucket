@@ -12,11 +12,11 @@ const Footer = () => {
   return (
     <>
       {/* Footer */}
-      <footer className="footer" id="contact">
+      <footer className="footer bg-navy text-white" id="contact">
         <div className="container">
           <div className="row g-4">
             <div className="col-lg-4">
-              <h3>DHULAI BUCKET</h3>
+              <h3 className="text-lavender fw-bold">DHULAI BUCKET</h3>
               <p>
                 Professional laundry and dry cleaning service at your doorstep.
               </p>
@@ -25,22 +25,6 @@ const Footer = () => {
                 <FaInstagram  className="bg-lavender"/>
                 <FaTwitter  className="bg-lavender"/>
               </div>
-            </div>
-
-            <div className="col-lg-2">
-              <h5>Quick Links</h5>
-              <a href="#home">Home</a>
-              <a href="#about">About</a>
-              <a href="#services">Services</a>
-              <a href="#booking">Booking</a>
-            </div>
-
-            <div className="col-lg-3">
-              <h5>Services</h5>
-              <a href="#services">Wash & Fold</a>
-              <a href="#services">Dry Cleaning</a>
-              <a href="#services">Ironing</a>
-              <a href="#services">Express Laundry</a>
             </div>
 
             <div className="col-lg-3">

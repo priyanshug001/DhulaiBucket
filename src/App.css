@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 :root {
   --navy: #0b0a2a;
   --lavender: #b89ac3;
@@ -9,19 +10,26 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Luckiest Guy", cursive;
 }
-
+/*BACKGROUND-COLOR-CSS*/
 .bg-lavender {
-  background: var(--lavender);
+  background: var(--lavender) !important;
 }
 
+.bg-navy{
+  background-color: var(--navy) !important;
+
+}
+/*TEXT-COLOR-CSS*/
 .text-lavender {
-  color: var(--lavender);
+  color: var(--lavender) !important;
 }
 
+.text-navy{
+  color: var(--navy) !important;
+}
 .home-page {
-  font-family: "Poppins", sans-serif;
-  color: var(--navy);
   overflow-x: hidden;
 }
 
@@ -30,10 +38,6 @@
   width: 48px;
   height: 50px;
   object-fit: contain;
-}
-
-.nav-link {
-  color: var(--navy) !important;
 }
 
 .nav-link:hover,
@@ -67,7 +71,6 @@
 }
 
 .hero-left p {
-  font-size: 1.25rem;
   color: #4b4b60;
   max-width: 520px;
   margin-bottom: 35px;
@@ -80,12 +83,10 @@
 }
 
 .primary-btn {
-  color: var(--white);
   box-shadow: 0 6px 0 var(--navy);
 }
 
 .secondary-btn {
-  color: var(--navy);
   border: 2px solid var(--lavender);
   box-shadow: 0 6px 0 var(--lavender);
 }
@@ -140,9 +141,6 @@
 .card-icon {
   width: 30px;
   height: 30px;
-  background: var(--lavender);
-  color: #fff;
-  font-size: 15px;
 }
 
 .card-one {
@@ -176,13 +174,6 @@
   opacity: 0.6;
 }
 
-/* Sections */
-.section-title h2 {
-  font-size: 2.6rem;
-  font-weight: 900;
-  color: var(--navy);
-}
-
 .section-title p {
   color: #666;
   font-size: 1.1rem;
@@ -190,17 +181,14 @@
 
 /* Cards */
 .feature-card,
-.service-card,
-.testimonial-card {
-  background: var(--white);
+.service-card {
   padding: 35px 28px;
   box-shadow: 0 12px 35px rgba(11, 10, 42, 0.08);
   transition: 0.3s;
 }
 
 .feature-card:hover,
-.service-card:hover,
-.testimonial-card:hover {
+.service-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 45px rgba(184, 154, 195, 0.45);
 }
@@ -211,66 +199,73 @@
   height: 70px;
 }
 
-.feature-card h4,
-.service-card h4 {
-  font-weight: 800;
-  color: var(--navy);
-}
-
 .feature-card p,
 .service-card p,
 .testimonial-card p {
   color: #666;
 }
 
-.services-section {
-  background: var(--light-bg);
+/*MOBILE-APP-CSS*/
+.download-splash {
+  position: absolute;
+  width: 620px;
+  height: 320px;
+  background: white;
+  border-radius: 45% 55% 60% 40% / 55% 40% 60% 45%;
+  left: 40px;
+  top: 85px;
+  z-index: 1;
 }
 
+.download-splash::before,
+.download-splash::after {
+  content: "";
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+}
+
+.download-splash::before {
+  width: 70px;
+  height: 35px;
+  left: -55px;
+  top: 90px;
+}
+
+.download-splash::after {
+  width: 95px;
+  height: 42px;
+  right: -65px;
+  top: 155px;
+}
+
+@media (max-width: 991px) {
+  .download-splash {
+    width: 520px;
+    height: 280px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 576px) {
+  .download-splash {
+    width: 360px;
+    height: 220px;
+  }
+}
 /* Stats */
 .stats-section {
-  background: var(--navy);
-  color: var(--white);
   padding: 70px 0;
 }
 
 .stat-box h2 {
   font-size: 3rem;
-} 
-
-/* Testimonials */
-.testimonial-card h5 {
-  color: var(--navy);
-  font-weight: 800;
-  margin-top: 20px;
-}
-
-.stars {
-  letter-spacing: 3px;
 }
 
 /* Footer */
 .footer {
-  background: #07061c;
-  color: var(--white);
   padding: 70px 0 25px;
-}
-
-.footer h3,
-.footer h5 {
-  color: var(--lavender);
-  font-weight: 800;
-}
-
-.footer a {
-  display: block;
-  color: #ddd;
-  text-decoration: none;
-  margin-bottom: 10px;
-}
-
-.footer a:hover {
-  color: var(--lavender);
 }
 
 .footer p {
@@ -394,5 +389,79 @@
   .section-title h2,
   .cta-section h2 {
     font-size: 2rem;
+  }
+}
+
+/*SERVICES CSS*/
+.service-card {
+  transition: 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+.service-icon {
+  width: 110px;
+  height: 110px;
+  border-right: 4px solid #b89ac3;
+  border-bottom: 4px solid #0b0a2a;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.service-link {
+  transition: 0.3s;
+}
+
+.service-link:hover {
+  color: #0b0a2a;
+}
+/*ABOUT CSS*/
+.about-splash {
+  position: absolute;
+  top: -120px;
+  width: 630px;
+  height: 380px;
+  background: rgba(184, 154, 195, 0.35);
+  border-radius: 45% 55% 65% 35% / 40% 45% 55% 60%;
+  z-index: 1;
+}
+
+.about-splash::before,
+.about-splash::after {
+  content: "";
+  position: absolute;
+  background: #f8f9fa;
+  border-radius: 50%;
+}
+
+.about-splash::before {
+  width: 130px;
+  height: 190px;
+  left: 170px;
+  bottom: -95px;
+}
+
+.about-splash::after {
+  width: 110px;
+  height: 230px;
+  right: 110px;
+  bottom: -120px;
+}
+
+@media (max-width: 991px) {
+  .about-splash {
+    width: 620px;
+    height: 420px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 576px) {
+  .about-splash {
+    width: 420px;
+    height: 300px;
+    top: -70px;
   }
 }
