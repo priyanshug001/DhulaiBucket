@@ -7,11 +7,14 @@ import {
   FaLeaf,
   FaStar,
   FaTags,
+  FaSoap,
+  FaBolt,
 } from "react-icons/fa";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import logom from "../assets/images/home.png"
 import { Link } from "react-router-dom";
+import app from "../assets/images/downloadapp.png"
 
 const Home = () => {
   return (
@@ -30,7 +33,7 @@ const Home = () => {
                     DHULAI <br />
                     BUCKET
                   </h1>
-                  <p className="fs-5 text-navy">
+                  <p className="fs-5 text-navy fw-normal">
                     Professional Laundry & Dry Cleaning Service at Your Doorstep.
                   </p>
 
@@ -60,7 +63,7 @@ const Home = () => {
                         <FaTruck />
                       </div>
                       <div>
-                        <h5 className="m-0 fw-bold fs-6 text-navy">Free Pickup & Delivery</h5>
+                        <h5 className="m-0 fw-normal fs-6 text-navy">Free Pickup & Delivery</h5>
                         <p className="m-0">Doorstep service</p>
                       </div>
                     </div>
@@ -70,7 +73,7 @@ const Home = () => {
                         <FaClock />
                       </div>
                       <div>
-                        <h5 className="m-0 fw-bold fs-6 text-navy">Open 24 Hours</h5>
+                        <h5 className="m-0 fw-normal fs-6 text-navy">Open 24 Hours</h5>
                         <p className="m-0">Anytime support</p>
                       </div>
                     </div>
@@ -80,7 +83,7 @@ const Home = () => {
                         <FaShieldAlt />
                       </div>
                       <div>
-                        <h5 className="m-0 fw-bold fs-6 text-navy">Fabric Safe Cleaning</h5>
+                        <h5 className="m-0 fw-normal fs-6 text-navy">Fabric Safe Cleaning</h5>
                         <p className="m-0">Premium care</p>
                       </div>
                     </div>
@@ -90,7 +93,7 @@ const Home = () => {
                         <FaStar />
                       </div>
                       <div>
-                        <h5 className="m-0 fw-bold fs-6 text-navy">Premium Washing</h5>
+                        <h5 className="m-0 fw-normal fs-6 text-navy">Premium Washing</h5>
                         <p className="m-0">Fresh finish</p>
                       </div>
                     </div>
@@ -102,7 +105,7 @@ const Home = () => {
             {/* Features */}
             <section className="py-4" id="about">
               <div className="section-title text-center mb-5">
-                <h2 className="text-navy fs-1 fw-bolder">Why Choose Us?</h2>
+                <h2 className="text-navy fs-1 fw-bold">Why Choose Us?</h2>
                 <p>Fresh clothes, quick pickup, and professional fabric care.</p>
               </div>
 
@@ -114,9 +117,9 @@ const Home = () => {
                   [<FaTags />, "Affordable Pricing"],
                 ].map((item, index) => (
                   <div className="col-md-6 col-lg-3" key={index}>
-                    <div className="feature-card bg-white h-100 text-center rounded-3">
-                      <span className="feature-icon bg-lavender text-white rounded-circle p-3 fs-4 text-center">{item[0]}</span>
-                      <h4 className="fw-bold text-navy mt-4">{item[1]}</h4>
+                    <div className="feature-card bg-white h-100 text-center rounded-3 p-3">
+                      <span className="feature-icon bg-lavender text-white rounded-circle fs-4 text-center d-inline-flex align-items-center justify-content-center">{item[0]}</span>
+                      <h5 className="fw-normal text-navy mt-2">{item[1]}</h5>
                       <p>Reliable laundry service designed for your daily needs.</p>
                     </div>
                   </div>
@@ -127,22 +130,30 @@ const Home = () => {
             {/* Services */}
             <section className="py-4 services-section" id="services">
               <div className="section-title text-center">
-                <h2 className="text-navy fs-1 fw-bolder">Our Services</h2>
+                <h2 className="text-navy fs-1 fw-bold">Our Services</h2>
                 <p>Complete laundry solutions for your clothes and home fabrics.</p>
               </div>
 
               <div className="row g-4">
                 {[
-                  "Wash & Fold",
-                  "Dry Cleaning",
-                  "Ironing",
-                  "Express Laundry",
+                  [<FaTshirt />, "Wash & Fold"],
+                  [<FaSoap />, "Dry Cleaning"],
+                  [<FaBolt />, "Ironing"],
+                  [<FaBolt />, "Express Laundry"],
                 ].map((service, index) => (
                   <div className="col-md-6 col-lg-3" key={index}>
-                    <div className="service-card bg-white h-100 text-center rounded-3">
-                      <FaTshirt className="bg-lavender text-white rounded-circle p-3 mb-4" />
-                      <h4 className="fw-bold text-navy">{service}</h4>
-                      <p>Quality cleaning with safe washing and timely delivery.</p>
+                    <div className="service-card bg-white h-100 text-center rounded-3 p-3">
+                      <span className="feature-icon bg-lavender text-white rounded-circle fs-4 text-center d-inline-flex align-items-center justify-content-center">
+                        {service[0]}
+                      </span>
+
+                      <h5 className="fw-normal text-navy mt-2">
+                        {service[1]}
+                      </h5>
+
+                      <p>
+                        Quality cleaning with safe washing and timely delivery.
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -158,17 +169,18 @@ const Home = () => {
 
                 {/* Left Side */}
                 <div
-                  className="col-lg-6 position-relative d-flex justify-content-center align-items-end mb-5 mb-lg-0"
+                  className="col-lg-6 d-flex justify-content-center align-items-end mb-5 mb-lg-0"
                   style={{ minHeight: "520px" }}
                 >
 
                   <img
-                    src="/images/app-worker.png"
+                    src={app}
                     alt="Dhulai Bucket App"
-                    className="img-fluid position-relative z-3"
+                    className=""
                     style={{
                       maxWidth: "560px",
-                      width: "88%"
+                      width: "100%",
+                      height: "550px"
                     }}
                   />
                 </div>
@@ -183,7 +195,7 @@ const Home = () => {
                   <h2
                     className="fw-bold lh-1 mb-4 fw-bold text-navy"
                     style={{
-                      fontSize: "clamp(52px,5vw,86px)",
+                      fontSize: "clamp(52px,4vw,86px)",
                     }}
                   >
                     Download <br />
@@ -201,25 +213,25 @@ const Home = () => {
                   <div className="row g-3 mb-4">
 
                     <div className="col-md-6">
-                      <span className="fw-semibold text-navy">
+                      <span className="fw-normal text-navy">
                         ✓ One-Tap Pickup Booking
                       </span>
                     </div>
 
                     <div className="col-md-6">
-                      <span className="fw-semibold text-navy">
+                      <span className="fw-normal text-navy">
                         ✓ Real-Time Order Tracking
                       </span>
                     </div>
 
                     <div className="col-md-6">
-                      <span className="fw-semibold text-navy">
+                      <span className="fw-normal text-navy">
                         ✓ Secure Online Payments
                       </span>
                     </div>
 
                     <div className="col-md-6">
-                      <span className="fw-semibold text-navy">
+                      <span className="fw-normal text-navy">
                         ✓ Exclusive App Discounts
                       </span>
                     </div>

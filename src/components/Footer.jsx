@@ -44,7 +44,7 @@ const Footer = () => {
                 </Link>
 
                 <Link
-                  to="https://instagram.com/yourpage"
+                  to="https://instagram.com/dhulai_bucket"
                   target="_blank"
                   className="bg-lavender text-white rounded-circle d-flex justify-content-center align-items-center text-decoration-none"
                 >

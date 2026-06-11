@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Chango&family=Luckiest+Guy&display=swap');
 
 :root {
-  --navy: #0B0A2A ;
+  --navy: #0B0A2A;
   --lavender: #b89ac3;
   --white: #ffffff;
   --light-bg: #f5f7fb;
@@ -58,6 +58,7 @@
   background: var(--lavender);
   color: #fff;
 }
+
 .active-link {
   color: #b89ac3 !important;
   position: relative;
@@ -73,6 +74,7 @@
   background: #b89ac3;
   border-radius: 10px;
 }
+
 /* Hero */
 .hero-section {
   background: linear-gradient(135deg, #f8f6fb, #f2edf7);
@@ -199,7 +201,6 @@
 /* Cards */
 .feature-card,
 .service-card {
-  padding: 35px 28px;
   box-shadow: 0 12px 35px rgba(11, 10, 42, 0.08);
   transition: 0.3s;
 }
@@ -210,10 +211,9 @@
   box-shadow: 0 20px 45px rgba(184, 154, 195, 0.45);
 }
 
-.feature-icon,
-.service-card svg {
-  width: 70px;
-  height: 70px;
+.feature-icon {
+  width: 42px;
+  height: 42px;
 }
 
 .feature-card p,
@@ -346,8 +346,8 @@
 }
 
 .service-icon {
-  width: 110px;
-  height: 110px;
+  width: 42px;
+  height: 42px;
   border-right: 4px solid #b89ac3;
   border-bottom: 4px solid #0b0a2a;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
@@ -359,4 +359,192 @@
 
 .service-link:hover {
   color: #0b0a2a;
+}
+
+/*BOOKING-CSS*/
+.booking-page {
+  background: var(--light-lavender);
+  color: var(--navy);
+}
+
+
+.ls-3 {
+  letter-spacing: 4px;
+}
+
+.hero-card {
+  background: linear-gradient(135deg, #ffffff, #f3edf7);
+}
+
+.status-no,
+.icon-circle,
+.feature-icon {
+  background: rgba(184, 154, 195, 0.16);
+}
+
+.card-btn,
+.addon-btn {
+  border: 1.5px solid #eadff0;
+  background: #ffffff;
+  border-radius: 18px;
+  transition: 0.25s ease;
+
+}
+
+.card-btn.selected,
+.addon-btn.selected,
+.card-btn:hover,
+.addon-btn:hover {
+  border-color: var(--lavender);
+  background: rgba(184, 154, 195, 0.12);
+}
+
+.addon-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.small-card {
+  min-height: 55px;
+  font-weight: 700;
+}
+
+.midnight-strip {
+  background: linear-gradient(135deg, #ffffff, #eee1f5);
+  color: var(--navy);
+}
+
+.total-box {
+  background: #f7eefb;
+  border: 1px solid #eadff0;
+}
+
+.sticky-summary {
+  position: sticky;
+}
+
+.floating-img {
+
+  animation: floatImg 3s ease-in-out infinite;
+
+}
+
+@keyframes floatImg {
+
+  0%,
+
+  100% {
+
+    transform: translateY(0);
+
+  }
+
+  50% {
+
+    transform: translateY(-12px);
+
+  }
+
+}
+
+@media (max-width: 991px) {
+
+  .sticky-summary {
+
+    position: static;
+
+  }
+
+}
+
+.pricing-page {
+
+  background: var(--light);
+
+  color: var(--navy);
+
+}
+
+.hero-pricing {
+
+  background:
+
+    radial-gradient(circle at 10% 20%, rgba(184, 154, 195, 0.18), transparent 25%),
+
+    radial-gradient(circle at 90% 25%, rgba(184, 154, 195, 0.18), transparent 25%),
+
+    linear-gradient(135deg, #ffffff, #f8f6fb);
+
+}
+
+.bg-gold {
+
+  background: var(--gold) !important;
+
+}
+
+.ls-3 {
+
+  letter-spacing: 4px;
+
+}
+
+.pricing-card {
+
+  min-height: 585px;
+
+  transition: 0.25s ease;
+
+}
+
+.pricing-card:hover {
+
+  transform: translateY(-8px);
+
+}
+
+.icon-circle {
+  width: 42px;
+  height: 42px;
+  background: rgba(184, 154, 195, 0.16);
+  font-size: 34px;
+}
+
+.soft-card {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(184, 154, 195, 0.25) !important;
+}
+
+.royal-card {
+  background: linear-gradient(135deg, #0b0a2a, #281d58);
+}
+
+.royal-card .icon-circle {
+  background: #ffffff;
+  color: var(--gold);
+}
+
+.cta-card {
+  background: linear-gradient(135deg, #ffffff, #f1e7f6);
+}
+
+@media (max-width: 576px) {
+  .pricing-card {
+    min-height: auto;
+  }
+
+  .hero-pricing h1 {
+    font-size: 42px;
+  }
+
+}
+
+.icon-circles {
+  width: 35px;
+  height: 35px;
+  min-width: 35px;
+  flex-shrink: 0;
+  background: rgba(184, 154, 195, 0.16);
 }

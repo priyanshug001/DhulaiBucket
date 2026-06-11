@@ -10,7 +10,7 @@ import Header from "../components/Header";
 import "../App.css";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-import service from "../assets/images/service.png"
+import service from "../assets/images/services.png"
 
 const services = [
     {
@@ -67,15 +67,15 @@ const Services = () => {
                             >
                                 <div className="card h-100 border-0 shadow-sm rounded-4 text-center service-card">
                                     <div className="card-body p-4 d-flex flex-column">
-                                        <div className="service-icon fs-1 mx-auto mb-4 text-lavender d-flex justify-content-center align-items-center rounded-circle">
+                                        <div className="service-icon fs-4 mx-auto mb-4 text-lavender d-flex justify-content-center align-items-center rounded-circle">
                                             {service.icon}
                                         </div>
 
-                                        <h3 className="h4 fw-bold mb-3">
+                                        <h4 className="fs-5 fw-bold mb-3">
                                             {service.title}
-                                        </h3>
+                                        </h4>
 
-                                        <p className="text-secondary flex-grow-1">
+                                        <p className="text-secondary flex-grow-1" style={{fontSize:"13px"}}>
                                             {service.desc}
                                         </p>
 

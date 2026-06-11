@@ -14,14 +14,14 @@ const AboutSection = () => {
                     >
                         <div className="row align-items-center">
                             {/* Image Side */}
-                            <div className="col-lg-6 position-relative d-flex justify-content-center align-items-end">
+                            <div className="col-lg-6 d-flex justify-content-center align-items-center">
                                 <img
                                     src={workerImg}
                                     alt="Laundry Worker"
-                                    className="img-fluid position-relative z-3"
+                                    className="img-fluid"
                                     style={{
                                         maxWidth: "620px",
-                                        width: "82%"
+                                        width: "100%"
                                     }}
                                 />
                             </div>
@@ -32,7 +32,7 @@ const AboutSection = () => {
                                 <h2
                                     className="fw-bold lh-1 mb-4 text-lavender"
                                     style={{
-                                        fontSize: "clamp(52px,5.8vw,79px)",
+                                        fontSize: "clamp(52px,4.8vw,79px)",
                                     }}
                                 >
                                     Getting Tired <br />
