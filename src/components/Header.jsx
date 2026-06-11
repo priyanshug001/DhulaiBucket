@@ -1,85 +1,86 @@
 import React from "react";
 import logoTransparent from "../assets/images/DhulaiBucketLogoTransparent.png";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
+  const navLinkClass = ({ isActive }) =>
+    `nav-link text-navy fw-semibold ${isActive ? "active-link" : ""}`;
+
   return (
-    <nav
-      className="navbar navbar-expand-lg navbar-dark py-3 shadow"
-      style={{ backgroundColor: "#0B0A2A" }}
-    >
-      <div className="container">
-        <a className="navbar-brand d-flex align-items-center" href="#home">
-          <img
-            src={logoTransparent}
-            alt="Dhulai Bucket"
-            className="navbar-logo"
-          />
-        </a>
-
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#basic-navbar-nav"
-          aria-controls="basic-navbar-nav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-
-        <div className="collapse navbar-collapse" id="basic-navbar-nav">
-          <ul className="navbar-nav mx-auto">
-            <li className="nav-item">
-              <a
-                className="nav-link fw-semibold px-3"
-                style={{ color: "#B89AC3" }}
-                href="#home"
-              >
-                Home
-              </a>
-            </li>
-
-            <li className="nav-item">
-              <a
-                className="nav-link fw-semibold px-3"
-                style={{ color: "#B89AC3" }}
-                href="#about"
-              >
-                About
-              </a>
-            </li>
-
-            <li className="nav-item">
-              <a
-                className="nav-link fw-semibold px-3"
-                style={{ color: "#B89AC3" }}
-                href="#services"
-              >
-                Services
-              </a>
-            </li>
-
-            <li className="nav-item">
-              <a
-                className="nav-link fw-semibold px-3"
-                style={{ color: "#B89AC3" }}
-                href="#contact"
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
+    <>
+      <nav
+        className="navbar navbar-expand-lg fixed-top bg-white bg-opacity-90 shadow-sm py-2 rounded-bottom-5"
+        style={{ backdropFilter: "blur(12px)" }}
+      >
+        <div className="container">
+          <NavLink className="navbar-brand" to="/home">
+            <img
+              src={logoTransparent}
+              alt="Dhulai Bucket"
+              className="nav-logo"
+            />
+          </NavLink>
 
           <button
-            className="btn rounded-pill px-4 fw-bold text-white"
-            style={{ backgroundColor: "#B89AC3" }}
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
           >
-            Book Now
+            <span className="navbar-toggler-icon"></span>
           </button>
+
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav ms-auto align-items-lg-center gap-lg-4">
+              <li className="nav-item">
+                <NavLink to="/home" end className={navLinkClass}>
+                  Home
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
+                <NavLink to="/aboutsection" className={navLinkClass}>
+                  About
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
+                <NavLink to="/services" className={navLinkClass}>
+                  Services
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
+                <NavLink to="/pricing" className={navLinkClass}>
+                  Subscription
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
+                <NavLink to="/trackorder" className={navLinkClass}>
+                  Track Order
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
+                <NavLink to="/aiwardrobe" className={navLinkClass}>
+                  AIWardrobe
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
+                <NavLink
+                  className="btn rounded-3 fw-bold px-3 py-2 book-btn text-lavender bg-white"
+                  to="/booking"
+                >
+                  Book Now
+                </NavLink>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 };
 
