@@ -4,7 +4,9 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const navLinkClass = ({ isActive }) =>
-    `nav-link text-navy fw-semibold ${isActive ? "active-link" : ""}`;
+    `nav-link text-navy fw-semibold ${
+      isActive ? "active-link" : ""
+    }`;
 
   return (
     <>
@@ -33,38 +35,39 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto align-items-lg-center gap-lg-4">
               <li className="nav-item">
-                <NavLink to="/home" end className={navLinkClass}>
+                <NavLink
+                  to="/home"
+                  end
+                  className={navLinkClass}
+                >
                   Home
                 </NavLink>
               </li>
 
               <li className="nav-item">
-                <NavLink to="/aboutsection" className={navLinkClass}>
+                <NavLink
+                  to="/aboutsection"
+                  className={navLinkClass}
+                >
                   About
                 </NavLink>
               </li>
 
               <li className="nav-item">
-                <NavLink to="/services" className={navLinkClass}>
+                <NavLink
+                  to="/services"
+                  className={navLinkClass}
+                >
                   Services
                 </NavLink>
               </li>
 
               <li className="nav-item">
-                <NavLink to="/pricing" className={navLinkClass}>
-                  Subscription
-                </NavLink>
-              </li>
-
-              <li className="nav-item">
-                <NavLink to="/trackorder" className={navLinkClass}>
-                  Track Order
-                </NavLink>
-              </li>
-
-              <li className="nav-item">
-                <NavLink to="/aiwardrobe" className={navLinkClass}>
-                  AIWardrobe
+                <NavLink
+                  to="/pricing"
+                  className={navLinkClass}
+                >
+                  Pricing
                 </NavLink>
               </li>
 
