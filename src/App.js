@@ -5,10 +5,11 @@ import Home from "./pages/Home";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import Services from './pages/Services';
-import AboutSection from './pages/AboutSection';
-import Pricing from './pages/Pricing';
-import Booking from './pages/Booking';
+import Services from "./pages/Services";
+import AboutSection from "./pages/AboutSection";
+import Pricing from "./pages/Pricing";
+import Booking from "./pages/Booking";
+import AdminDashboard from "./admin/pages/AdminDashboard";
 
 function App() {
   return (
@@ -17,10 +18,11 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
-          <Route path='/aboutsection' element={<AboutSection />} />
-          <Route path='/services' element={<Services />} />
-          <Route path='/pricing' element={<Pricing />} />
-          <Route path='/booking' element={<Booking />} />
+          <Route path="/aboutsection" element={<AboutSection />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/booking" element={<Booking />} />
+          <Route path="/admin/admindashboard" element={<AdminDashboard />} />
         </Routes>
       </BrowserRouter>
     </>
