@@ -152,7 +152,7 @@ const Pricing = () => {
                                         }`}
                                 >
                                     {plan.badge && (
-                                        <span className="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-gold text-navy px-4 py-2">
+                                        <span className="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-lavender text-navy px-3 py-2">
                                             ★ {plan.badge} ★
                                         </span>
                                     )}

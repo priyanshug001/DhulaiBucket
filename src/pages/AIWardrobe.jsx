@@ -15,7 +15,6 @@ import {
   FaCrown,
   FaBoxOpen,
   FaSpa,
-  FaUserShield,
   FaSprayCan,
   FaSoap,
   FaClock,
@@ -27,6 +26,9 @@ import {
   FaQrcode,
   FaRobot,
 } from "react-icons/fa";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import aiwardrobe from "../assets/images/aiwardrobe.png";
 
 const API_URL = "http://127.0.0.1:5000";
 
@@ -82,14 +84,6 @@ const AIWardrobe = () => {
     ["AI Wardrobe Care", "Smart cloth care", <FaTshirt />],
     ["Pickup / Delivery", "Fast doorstep service", <FaTruck />],
     ["Premium Packaging", "Hygienic packing", <FaBoxOpen />],
-  ];
-
-  const included = [
-    ["Expert Care", "Trained staff", <FaUserShield />],
-    ["Safe Cleaning", "Fabric safe wash", <FaShieldAlt />],
-    ["Fresh Fragrance", "Long lasting scent", <FaSpa />],
-    ["Hygienic Pack", "Premium packing", <FaBoxOpen />],
-    ["On Time", "Fast delivery", <FaTruck />],
   ];
 
   const reportRows = [
@@ -174,392 +168,371 @@ const AIWardrobe = () => {
   };
 
   return (
-    <main style={{ background: theme.lightBg, minHeight: "100vh" }}>
-      <div className="container-fluid py-4 px-3">
-        <div className="row g-4">
-          <aside className="col-lg-3">
-            <div className="card border-0 shadow-sm rounded-4 p-4 mb-4">
-              <div className="d-flex gap-3 mb-4">
-                <div
-                  className="rounded-4 d-flex align-items-center justify-content-center"
-                  style={iconBoxStyle}
-                >
-                  <FaUpload />
-                </div>
-                <div>
-                  <h5 className="fw-bold mb-1" style={{ color: theme.navy }}>
-                    Upload Cloth Image
-                  </h5>
-                  <p className="small text-muted mb-0">JPG, PNG, WEBP</p>
-                </div>
-              </div>
+    <>
+      <Header />
+      <section
+        id="pricing"
+        className="py-5"
+        style={{
+          background:
+            "linear-gradient(135deg, #f8f6fb, #f2edf7)",
+        }}
+      >
 
-              <label
-                className="w-100 rounded-4 d-flex align-items-center justify-content-center text-center overflow-hidden"
-                style={{
-                  height: "250px",
-                  border: `2px dashed ${theme.lavender}`,
-                  background: "rgba(184,154,195,0.12)",
-                  color: theme.lavender,
-                  cursor: "pointer",
-                }}
-              >
-                {image ? (
-                  <img
-                    src={image}
-                    alt="Uploaded cloth"
-                    className="w-100 h-100 object-fit-cover"
-                  />
-                ) : (
-                  <div>
-                    <FaUpload size={42} />
-                    <p className="fw-bold mt-3 mb-0">Click to upload image</p>
-                  </div>
-                )}
-
-                <input
-                  type="file"
-                  accept="image/*"
-                  hidden
-                  onChange={handleImageUpload}
-                />
-              </label>
-
-              <div
-                className="alert mt-3 mb-0 fw-semibold"
-                style={{
-                  background: "rgba(184,154,195,0.14)",
-                  color: theme.navy,
-                }}
-              >
-                <FaShieldAlt className="me-2" />
-                Image uploaded successfully
-              </div>
-
-              <button
-                className="btn w-100 rounded-3 py-3 fw-bold mt-4 text-white"
-                style={{ background: theme.lavender }}
-                onClick={generateReport}
-                disabled={loading}
-              >
-                {loading ? (
-                  <>
-                    <FaSpinner className="me-2" /> Analyzing...
-                  </>
-                ) : (
-                  <>
-                    <FaMagic className="me-2" /> Generate AI Report
-                  </>
-                )}
-              </button>
-
-              <button
-                className="btn btn-light border w-100 rounded-3 py-3 fw-bold mt-3"
-                onClick={copyReport}
-                style={{ color: theme.navy }}
-              >
-                <FaCopy className="me-2" /> Copy Report JSON
-              </button>
-
-              <div
-                className="alert mt-4 mb-0 small"
-                style={{
-                  background: "rgba(184,154,195,0.14)",
-                  color: theme.navy,
-                }}
-              >
-                <FaInfoCircle className="me-2" />
-                <b>Note:</b> Dhulai Bucket AI demo report is shown.
-              </div>
-            </div>
-
-            <div className="card border-0 shadow-sm rounded-4 p-4 mb-4">
-              <h5 className="fw-bold mb-4" style={{ color: theme.navy }}>
-                <FaRobot className="me-2" style={{ color: theme.lavender }} />
-                Dhulai Bucket Services
-              </h5>
-
-              {services.map((item) => (
-                <div className="d-flex gap-3 mb-3" key={item[0]}>
+        <div className="service-image mt-4">
+          <img
+            src={aiwardrobe}
+            alt="Services"
+            className="w-100"
+            style={{
+              height: "320px",
+            }}
+          />
+        </div>
+        <div className="container py-4 px-3">
+          <div className="row g-4">
+            <aside className="col-lg-3">
+              <div className="card border-0 shadow-sm rounded-4 p-4 mb-4">
+                <div className="d-flex gap-3 mb-4">
                   <div
                     className="rounded-4 d-flex align-items-center justify-content-center"
                     style={iconBoxStyle}
                   >
-                    {item[2]}
+                    <FaUpload />
                   </div>
                   <div>
-                    <h6 className="fw-bold mb-1" style={{ color: theme.navy }}>
-                      {item[0]}
+                    <h6 className="fw-bold mb-1" style={{ color: theme.navy, fontSize: "17px" }}>
+                      Upload Cloth Image
                     </h6>
-                    <p className="small text-muted mb-0">{item[1]}</p>
+                    <p className="small text-muted mb-0" style={{ fontSize: "13px" }}>JPG, PNG, WEBP</p>
                   </div>
                 </div>
-              ))}
-            </div>
 
-            <div
-              className="card border-0 shadow-sm rounded-4 p-4"
-              style={{ background: "rgba(184,154,195,0.12)" }}
-            >
-              <h5 className="fw-bold" style={{ color: theme.navy }}>
-                <FaCrown className="me-2" style={{ color: theme.lavender }} />
-                Join Subscription Plan
-              </h5>
-              <p className="small text-muted">
-                Save more with Dhulai Bucket subscription plans.
-              </p>
-              <button className="btn btn-light rounded-3 fw-bold px-4">
-                View Plans
-              </button>
-            </div>
-          </aside>
-
-          <section className="col-lg-6">
-            <div className="card border-0 shadow-sm rounded-4 p-4">
-              <div className="d-flex justify-content-between align-items-start mb-4 flex-wrap gap-3">
-                <h1 className="fw-bold mb-0" style={{ color: theme.navy }}>
-                  <FaClipboardList
-                    className="me-3"
-                    style={{ color: theme.lavender }}
-                  />
-                  AI Fabric Care Report
-                </h1>
-
-                <div className="text-end">
-                  <span
-                    className="badge rounded-pill px-3 py-2 d-block mb-2"
-                    style={{ background: theme.navy }}
-                  >
-                    DEMO MODE
-                  </span>
-                  <span
-                    className="badge rounded-pill px-3 py-2"
-                    style={{
-                      background: "rgba(184,154,195,0.18)",
-                      color: theme.navy,
-                    }}
-                  >
-                    Dhulai Bucket AI
-                  </span>
-                </div>
-              </div>
-
-              <div className="row g-3 mb-4">
-                {[
-                  [<FaHeart />, "Health Score", report.clothHealthScore],
-                  [<FaSun />, "Stain Severity", report.stainSeverity],
-                  [<FaRupeeSign />, "Estimated Cost", report.estimatedLaundryCost],
-                  [<FaTruck />, "Delivery Time", report.estimatedDeliveryTime],
-                ].map((item, index) => (
-                  <div className="col-6 col-md-3" key={index}>
-                    <div className="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
-                      <div className="fs-5 mb-2" style={{ color: theme.lavender }}>
-                        {item[0]}
-                      </div>
-                      <h6 className="fw-bold" style={{ color: theme.navy }}>
-                        {item[1]}
-                      </h6>
-                      <h4 className="fw-bold mt-3" style={{ color: theme.lavender }}>
-                        {item[2]}
-                      </h4>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="card border rounded-4 p-4 mb-4">
-                <div className="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-3">
-                  <h4 className="fw-bold mb-0" style={{ color: theme.navy }}>
-                    <FaTshirt className="me-2" style={{ color: theme.lavender }} />
-                    Cloth Information
-                  </h4>
-
-                  <div
-                    className="rounded-4 px-3 py-2 d-flex align-items-center gap-3"
-                    style={{ background: "rgba(184,154,195,0.14)" }}
-                  >
+                <label
+                  className="w-100 rounded-4 d-flex align-items-center justify-content-center text-center overflow-hidden"
+                  style={{
+                    height: "250px",
+                    border: `2px dashed ${theme.lavender}`,
+                    background: "rgba(184,154,195,0.12)",
+                    color: theme.lavender,
+                    cursor: "pointer",
+                  }}
+                >
+                  {image ? (
+                    <img
+                      src={image}
+                      alt="Uploaded cloth"
+                      className="w-100 h-100 object-fit-cover"
+                    />
+                  ) : (
                     <div>
-                      <small
-                        className="fw-bold d-block"
-                        style={{ color: theme.lavender }}
-                      >
-                        AI Laundry Passport ID
-                      </small>
-                      <strong style={{ color: theme.navy }}>
-                        {report.passportId}
-                      </strong>
+                      <FaUpload size={42} />
+                      <p className="fw-bold mt-3 mb-0">Click to upload image</p>
                     </div>
-                    <FaQrcode className="fs-3" style={{ color: theme.lavender }} />
-                  </div>
+                  )}
+
+                  <input
+                    type="file"
+                    accept="image/*"
+                    hidden
+                    onChange={handleImageUpload}
+                  />
+                </label>
+
+                <div
+                  className="alert mt-3 mb-0 fw-semibold"
+                  style={{
+                    background: "rgba(184,154,195,0.14)",
+                    color: theme.navy,
+                    fontSize: "14px"
+                  }}
+                >
+                  <FaShieldAlt className="me-2" />
+                  Image uploaded
                 </div>
 
-                {reportRows.map((row) => (
-                  <div
-                    className="d-flex align-items-center gap-3 py-2 border-bottom"
-                    key={row[0]}
-                  >
-                    <span
-                      className="rounded-3 d-flex align-items-center justify-content-center"
-                      style={{
-                        width: "28px",
-                        height: "28px",
-                        minWidth: "28px",
-                        background: "rgba(184,154,195,0.14)",
-                        color: theme.lavender,
-                      }}
-                    >
-                      {row[2]}
-                    </span>
+                <button
+                  className="btn w-100 rounded-3 py-3 fw-bold mt-4 text-white"
+                  style={{ background: theme.lavender }}
+                  onClick={generateReport}
+                  disabled={loading}
+                >
+                  {loading ? (
+                    <>
+                      <FaSpinner className="me-2" /> Analyzing...
+                    </>
+                  ) : (
+                    <>
+                      <FaMagic className="me-2" /> Generate AI Report
+                    </>
+                  )}
+                </button>
 
-                    <span className="fw-bold flex-grow-1" style={{ color: theme.navy }}>
-                      {row[0]}
-                    </span>
+                <button
+                  className="btn btn-light border w-100 rounded-3 py-3 fw-bold mt-3"
+                  onClick={copyReport}
+                  style={{ color: theme.navy }}
+                >
+                  <FaCopy className="me-2" /> Copy Report JSON
+                </button>
 
-                    <strong className="text-end" style={{ color: theme.lavender }}>
-                      {row[1] || "N/A"}
-                    </strong>
-                  </div>
-                ))}
+                <div
+                  className="alert mt-4 mb-0 small"
+                  style={{
+                    background: "rgba(184,154,195,0.14)",
+                    color: theme.navy,
+                  }}
+                >
+                  <FaInfoCircle className="me-2" />
+                  <b>Note:</b> Dhulai Bucket AI demo report is shown.
+                </div>
               </div>
 
-              <div className="card border-0 rounded-4 p-4 mb-4">
-                <h4 className="fw-bold mb-4" style={{ color: theme.navy }}>
-                  What's Included in Our Service
-                </h4>
+              <div className="card border-0 shadow-sm rounded-4 p-4 mb-4">
+                <h5 className="fw-bold mb-4" style={{ color: theme.navy }}>
+                  <FaRobot className="me-2" style={{ color: theme.lavender }} />
+                  Dhulai Bucket Services
+                </h5>
 
-                <div className="row g-3 text-center">
-                  {included.map((item) => (
-                    <div className="col-6 col-md" key={item[0]}>
-                      <div
-                        className="rounded-circle d-flex align-items-center justify-content-center mx-auto mb-2"
-                        style={{
-                          width: "56px",
-                          height: "56px",
-                          background: "rgba(184,154,195,0.14)",
-                          color: theme.lavender,
-                        }}
-                      >
-                        {item[2]}
-                      </div>
+                {services.map((item) => (
+                  <div className="d-flex gap-3 mb-3" key={item[0]}>
+                    <div
+                      className="rounded-4 d-flex align-items-center justify-content-center"
+                      style={iconBoxStyle}
+                    >
+                      {item[2]}
+                    </div>
+                    <div>
                       <h6 className="fw-bold mb-1" style={{ color: theme.navy }}>
                         {item[0]}
                       </h6>
                       <p className="small text-muted mb-0">{item[1]}</p>
                     </div>
+                  </div>
+                ))}
+              </div>
+            </aside>
+
+            <section className="col-lg-6">
+              <div className="card border-0 shadow-sm rounded-4 p-4">
+                <div className="d-flex justify-content-between align-items-start mb-4 flex-wrap gap-3">
+                  <h3 className="fw-bold mb-0" style={{ color: theme.navy }}>
+                    <FaClipboardList
+                      className="me-3"
+                      style={{ color: theme.lavender }}
+                    />
+                    AI Fabric Care Report
+                  </h3>
+
+                  <div className="text-end">
+                    <span
+                      className="badge rounded-pill px-3 py-2 d-block mb-2"
+                      style={{ background: theme.navy }}
+                    >
+                      DEMO MODE
+                    </span>
+                    <span
+                      className="badge rounded-pill px-3 py-2"
+                      style={{
+                        background: "rgba(184,154,195,0.18)",
+                        color: theme.navy,
+                      }}
+                    >
+                      Dhulai Bucket AI
+                    </span>
+                  </div>
+                </div>
+
+                <div className="row g-3 mb-4">
+                  {[
+                    [<FaHeart />, "Health Score", report.clothHealthScore],
+                    [<FaSun />, "Stain Severity", report.stainSeverity],
+                    [<FaRupeeSign />, "Estimated Cost", report.estimatedLaundryCost],
+                    [<FaTruck />, "Delivery Time", report.estimatedDeliveryTime],
+                  ].map((item, index) => (
+                    <div className="col-6 col-md-6" key={index}>
+                      <div className="card h-100 border-0 shadow-sm rounded-4 text-center p-3">
+                        <div className="fs-5 mb-2" style={{ color: theme.lavender }}>
+                          {item[0]}
+                        </div>
+                        <h6 className="fw-bold" style={{ color: theme.navy }}>
+                          {item[1]}
+                        </h6>
+                        <h4 className="fw-bold mt-3" style={{ color: theme.lavender }}>
+                          {item[2]}
+                        </h4>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="card border rounded-4 p-4 mb-4">
+                  <div className="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-3">
+                    <h4 className="fw-bold mb-0" style={{ color: theme.navy }}>
+                      <FaTshirt className="me-2" style={{ color: theme.lavender }} />
+                      Cloth Information
+                    </h4>
+
+                    <div
+                      className="rounded-4 px-3 py-2 d-flex align-items-center gap-3"
+                      style={{ background: "rgba(184,154,195,0.14)" }}
+                    >
+                      <div>
+                        <small
+                          className="fw-bold d-block"
+                          style={{ color: theme.lavender }}
+                        >
+                          AI Laundry Passport ID
+                        </small>
+                        <strong style={{ color: theme.navy }}>
+                          {report.passportId}
+                        </strong>
+                      </div>
+                      <FaQrcode className="fs-3" style={{ color: theme.lavender }} />
+                    </div>
+                  </div>
+
+                  {reportRows.map((row) => (
+                    <div
+                      className="d-flex align-items-center gap-3 py-2 border-bottom"
+                      key={row[0]}
+                    >
+                      <span
+                        className="rounded-3 d-flex align-items-center justify-content-center"
+                        style={{
+                          width: "28px",
+                          height: "28px",
+                          minWidth: "28px",
+                          background: "rgba(184,154,195,0.14)",
+                          color: theme.lavender,
+                        }}
+                      >
+                        {row[2]}
+                      </span>
+
+                      <span className="fw-bold flex-grow-1" style={{ color: theme.navy }}>
+                        {row[0]}
+                      </span>
+
+                      <strong className="text-end" style={{ color: theme.lavender }}>
+                        {row[1] || "N/A"}
+                      </strong>
+                    </div>
+                  ))}
+                </div>
+
+                <div
+                  className="alert mb-0 small"
+                  style={{
+                    background: "rgba(184,154,195,0.14)",
+                    color: theme.navy,
+                  }}
+                >
+                  <FaInfoCircle className="me-2" />
+                  <b>Note:</b> This is a Dhulai Bucket AI demo report. Real AI
+                  analysis will be available when live AI service is active.
+                </div>
+              </div>
+            </section>
+
+            <aside className="col-lg-3">
+              <div className="card border-0 shadow-sm rounded-4 p-4 mb-4">
+                <h6 className="fw-bold mb-4" style={{ color: theme.navy, fontSize: "19px" }}>
+                  <FaMagic className="me-2" style={{ color: theme.lavender }} />
+                  AI Suggestion
+                </h6>
+
+                <div
+                  className="rounded-circle d-flex align-items-center justify-content-center mx-auto"
+                  style={{
+                    width: "135px",
+                    height: "135px",
+                    background: "rgba(184,154,195,0.14)",
+                    color: theme.lavender,
+                    fontSize: "72px",
+                    border: `8px solid rgba(184,154,195,0.24)`,
+                  }}
+                >
+                  <FaTshirt />
+                </div>
+
+                <p className="fw-semibold mt-4" style={{ color: theme.navy }}>
+                  {report.shortSuggestion}
+                </p>
+              </div>
+
+              <div className="card border-0 shadow-sm rounded-4 p-4 mb-4">
+                <h5 className="fw-bold mb-4" style={{ color: theme.navy }}>
+                  <FaExclamationTriangle
+                    className="me-2"
+                    style={{ color: theme.lavender }}
+                  />
+                  Care Warnings
+                </h5>
+
+                <div
+                  className="alert mb-0"
+                  style={{
+                    background: "rgba(184,154,195,0.14)",
+                    color: theme.navy,
+                  }}
+                >
+                  {(report.warnings || []).map((warning) => (
+                    <p className="mb-2 fw-semibold" key={warning}>
+                      • {warning}
+                    </p>
                   ))}
                 </div>
               </div>
 
               <div
-                className="alert mb-0 small"
-                style={{
-                  background: "rgba(184,154,195,0.14)",
-                  color: theme.navy,
-                }}
+                className="card border-0 shadow-sm rounded-4 p-4 mb-4"
+                style={{ background: "rgba(184,154,195,0.12)" }}
               >
-                <FaInfoCircle className="me-2" />
-                <b>Note:</b> This is a Dhulai Bucket AI demo report. Real AI
-                analysis will be available when live AI service is active.
-              </div>
-            </div>
-          </section>
+                <h5 className="fw-bold mb-4" style={{ color: theme.navy }}>
+                  <FaClipboardList
+                    className="me-2"
+                    style={{ color: theme.lavender }}
+                  />
+                  Service Summary
+                </h5>
 
-          <aside className="col-lg-3">
-            <div className="card border-0 shadow-sm rounded-4 p-4 mb-4">
-              <h5 className="fw-bold mb-4" style={{ color: theme.navy }}>
-                <FaMagic className="me-2" style={{ color: theme.lavender }} />
-                AI Suggestion
-              </h5>
-
-              <div
-                className="rounded-circle d-flex align-items-center justify-content-center mx-auto"
-                style={{
-                  width: "135px",
-                  height: "135px",
-                  background: "rgba(184,154,195,0.14)",
-                  color: theme.lavender,
-                  fontSize: "72px",
-                  border: `8px solid rgba(184,154,195,0.24)`,
-                }}
-              >
-                <FaTshirt />
-              </div>
-
-              <p className="fw-semibold mt-4" style={{ color: theme.navy }}>
-                {report.shortSuggestion}
-              </p>
-            </div>
-
-            <div className="card border-0 shadow-sm rounded-4 p-4 mb-4">
-              <h5 className="fw-bold mb-4" style={{ color: theme.navy }}>
-                <FaExclamationTriangle
-                  className="me-2"
-                  style={{ color: theme.lavender }}
-                />
-                Care Warnings
-              </h5>
-
-              <div
-                className="alert mb-0"
-                style={{
-                  background: "rgba(184,154,195,0.14)",
-                  color: theme.navy,
-                }}
-              >
-                {(report.warnings || []).map((warning) => (
-                  <p className="mb-2 fw-semibold" key={warning}>
-                    • {warning}
-                  </p>
+                {[
+                  ["Recommended Service", report.washType],
+                  ["Fragrance", report.recommendedFragrance],
+                  ["Packaging", "Premium"],
+                  ["Pickup / Delivery", "Available"],
+                ].map((item) => (
+                  <div className="mb-3" key={item[0]}>
+                    <span className="fw-bold d-block" style={{ color: theme.navy }}>
+                      {item[0]}
+                    </span>
+                    <b style={{ color: theme.lavender }}>{item[1]}</b>
+                  </div>
                 ))}
               </div>
-            </div>
 
-            <div
-              className="card border-0 shadow-sm rounded-4 p-4 mb-4"
-              style={{ background: "rgba(184,154,195,0.12)" }}
-            >
-              <h5 className="fw-bold mb-4" style={{ color: theme.navy }}>
-                <FaClipboardList
-                  className="me-2"
-                  style={{ color: theme.lavender }}
-                />
-                Service Summary
-              </h5>
-
-              {[
-                ["Recommended Service", report.washType],
-                ["Fragrance", report.recommendedFragrance],
-                ["Packaging", "Premium"],
-                ["Pickup / Delivery", "Available"],
-              ].map((item) => (
-                <div className="mb-3" key={item[0]}>
-                  <span className="fw-bold d-block" style={{ color: theme.navy }}>
-                    {item[0]}
-                  </span>
-                  <b style={{ color: theme.lavender }}>{item[1]}</b>
-                </div>
-              ))}
-            </div>
-
-            <div
-              className="card border-0 shadow-sm rounded-4 p-4 text-white"
-              style={{ background: theme.navy }}
-            >
-              <h5 className="fw-bold">
-                <FaCrown className="me-2" />
-                Upgrade to Premium
-              </h5>
-              <p className="small">
-                Get real AI analysis with unlimited reports and priority support.
-              </p>
-              <button className="btn btn-light rounded-3 fw-bold w-100">
-                Explore Plans
-              </button>
-            </div>
-          </aside>
+              <div
+                className="card border-0 shadow-sm rounded-4 p-4 text-white"
+                style={{ background: theme.navy }}
+              >
+                <h5 className="fw-bold">
+                  <FaCrown className="me-2" />
+                  Upgrade to Premium
+                </h5>
+                <p className="small">
+                  Get real AI analysis with unlimited reports and priority support.
+                </p>
+                <button className="btn btn-light rounded-3 fw-bold w-100">
+                  Explore Plans
+                </button>
+              </div>
+            </aside>
+          </div>
         </div>
-      </div>
-    </main>
+      </section>
+      <Footer />
+    </>
   );
 };
 

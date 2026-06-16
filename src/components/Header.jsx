@@ -4,8 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const navLinkClass = ({ isActive }) =>
-    `nav-link text-navy fw-semibold ${
-      isActive ? "active-link" : ""
+    `nav-link text-navy fw-semibold ${isActive ? "active-link" : ""
     }`;
 
   return (
@@ -70,7 +69,23 @@ const Header = () => {
                   Pricing
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink
+                  to="/trackorder"
+                  className={navLinkClass}
+                >
+                  Track Order
+                </NavLink>
+              </li>
 
+              <li className="nav-item">
+                <NavLink
+                  to="/aiwardrobe"
+                  className={navLinkClass}
+                >
+                  AIWardrobe
+                </NavLink>
+              </li>
               <li className="nav-item">
                 <NavLink
                   className="btn rounded-3 fw-bold px-3 py-2 book-btn text-lavender bg-white"

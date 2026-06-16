@@ -9,6 +9,8 @@ import Services from './pages/Services';
 import AboutSection from './pages/AboutSection';
 import Pricing from './pages/Pricing';
 import Booking from './pages/Booking';
+import TrackOrder from "./pages/TrackOrder";
+import AIWardrobe from "./pages/AIWardrobe";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
           <Route path='/services' element={<Services />} />
           <Route path='/pricing' element={<Pricing />} />
           <Route path='/booking' element={<Booking />} />
+          <Route path="/trackorder" element={<TrackOrder />} />
+          <Route path="/aiwardrobe" element={<AIWardrobe />} />
         </Routes>
       </BrowserRouter>
     </>
