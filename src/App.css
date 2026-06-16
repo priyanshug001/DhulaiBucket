@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Chango&family=Luckiest+Guy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Luckiest+Guy&family=Mozilla+Headline:wght@200..700&display=swap");
 
 :root {
-  --navy: #0B0A2A !important;
+  --navy: #0b0a2a !important;
   --lavender: #b89ac3 !important;
   --white: #ffffff !important;
   --light-bg: #f5f7fb !important;
@@ -11,7 +11,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Chango", sans-serif;
+  font-family: "Mozilla Headline", sans-serif;
 }
 
 /*BACKGROUND-COLOR-CSS*/
@@ -434,59 +434,48 @@
 }
 
 @media (max-width: 991px) {
-
   .sticky-summary {
-
     position: static;
-
   }
-
 }
 
 .pricing-page {
-
   background: var(--light);
 
   color: var(--navy);
-
 }
 
 .hero-pricing {
-
   background:
-
-    radial-gradient(circle at 10% 20%, rgba(184, 154, 195, 0.18), transparent 25%),
-
-    radial-gradient(circle at 90% 25%, rgba(184, 154, 195, 0.18), transparent 25%),
-
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(184, 154, 195, 0.18),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 90% 25%,
+      rgba(184, 154, 195, 0.18),
+      transparent 25%
+    ),
     linear-gradient(135deg, #ffffff, #f8f6fb);
-
 }
 
 .bg-gold {
-
   background: var(--gold) !important;
-
 }
 
 .ls-3 {
-
   letter-spacing: 4px;
-
 }
 
 .pricing-card {
-
   min-height: 585px;
 
   transition: 0.25s ease;
-
 }
 
 .pricing-card:hover {
-
   transform: translateY(-8px);
-
 }
 
 .icon-circle {
