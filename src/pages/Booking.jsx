@@ -122,7 +122,7 @@ const Booking = () => {
                                                     onClick={() => setSelectedService(service)}
                                                 >
                                                     <div className="icon-circles rounded-circle d-flex justify-content-center me-2 mb-2 align-items-center fs-5 text-lavender">{service.icon}</div>
-                                                    <p className="fw-normal mb-0" style={{fontSize:"12px"}}>{service.name} <br />
+                                                    <p className="fw-normal mb-0" style={{ fontSize: "13px" }}>{service.name} <br />
                                                         <span className="fw-normal">₹{service.price}</span>
                                                     </p>
                                                 </button>
@@ -153,7 +153,7 @@ const Booking = () => {
                                                         >
                                                             <span className="text-lavender">{addon.icon}</span>
                                                             <div className="text-start flex-grow-1">
-                                                                <div className="fw-bold small">{addon.name}</div>
+                                                                <h6 className="fw-bold mb-0" style={{ fontSize: "13px" }}>{addon.name}</h6>
                                                                 <small>₹{addon.price}</small>
                                                             </div>
 
@@ -176,8 +176,8 @@ const Booking = () => {
 
                                             <select
 
-                                                className="form-select form-select-lg rounded-3 mb-4"
-
+                                                className="form-select rounded-3 mb-4"
+                                                style={{ fontSize: "13px" }}
                                                 value={plan}
 
                                                 onChange={(e) => setPlan(e.target.value)}
@@ -193,19 +193,19 @@ const Booking = () => {
 
                                             <div className="row g-3">
                                                 <div className="col-md-6">
-                                                    <input className="form-control form-control-lg rounded-3" placeholder="Full Name" />
+                                                    <input style={{ fontSize: "13px" }} className="form-control rounded-3" placeholder="Full Name" />
                                                 </div>
                                                 <div className="col-md-6">
-                                                    <input className="form-control form-control-lg rounded-3" placeholder="Mobile Number" />
+                                                    <input style={{ fontSize: "13px" }} className="form-control rounded-3" placeholder="Mobile Number" />
                                                 </div>
                                                 <div className="col-12">
-                                                    <input className="form-control form-control-lg rounded-3" placeholder="Pickup Address" />
+                                                    <input style={{ fontSize: "13px" }} className="form-control rounded-3" placeholder="Pickup Address" />
                                                 </div>
                                                 <div className="col-md-6">
                                                     <select
 
-                                                        className="form-select form-select-lg rounded-3"
-
+                                                        className="form-select rounded-3"
+                                                        style={{ fontSize: "13px" }}
                                                         value={timeSlot}
 
                                                         onChange={(e) => setTimeSlot(e.target.value)}
@@ -217,8 +217,8 @@ const Booking = () => {
                                                     </select>
                                                 </div>
                                                 <div className="col-md-6">
-                                                    <button className="btn bg-lavender text-white btn-lg rounded-3 w-100 fw-bold">
-                                                        <FaMapMarkerAlt className="me-2" /> Use Current Location
+                                                    <button className="btn bg-lavender text-white rounded-3 w-100 fw-bold" style={{ fontSize: "13px" }}>
+                                                        <FaMapMarkerAlt className="me-2" /> <p className="mb-0">Use Current Location</p>
                                                     </button>
                                                 </div>
                                             </div>
@@ -237,9 +237,10 @@ const Booking = () => {
                                                     <div className="col-6 col-md-4 col-xl" key={item}>
                                                         <button
 
-                                                            className={`card-btn p-3 small-card w-100 ${fragrance === item ? "selected" : ""
+                                                            className={`card-btn p-2 small-card w-100 ${fragrance === item ? "selected" : ""
 
                                                                 }`}
+                                                            style={{ fontSize: "13px" }}
 
                                                             onClick={() => setFragrance(item)}
                                                         >
@@ -268,38 +269,38 @@ const Booking = () => {
                         <div className="col-lg-3">
                             <aside className="card border-0 shadow-sm rounded-4 sticky-summary">
                                 <div className="card-body p-3">
-                                    <h6 className="fw-bold mb-4">
+                                    <h5 className="fw-bold mb-4">
                                         <FaClipboardList className="text-lavender me-2" />
 
                                         Order Summary
-                                    </h6>
+                                    </h5>
 
-                                    <div className="d-flex justify-content-between mb-3">
-                                        <span>Service</span>
-                                        <b>{selectedService.name}</b>
+                                    <div className="d-flex justify-content-between mb-2">
+                                        <h6 className="mb-0" style={{ fontSize: "13px" }}>Service</h6>
+                                        <p className="mb-0" style={{ fontSize: "13px" }}>{selectedService.name}</p>
                                     </div>
 
                                     <div className="d-flex justify-content-between mb-3">
-                                        <span>Service Price</span>
-                                        <b>₹{selectedService.price}</b>
+                                        <h6 className="mb-0" style={{ fontSize: "13px" }}>Service Price</h6>
+                                        <p className="mb-0" style={{ fontSize: "13px" }}>₹{selectedService.price}</p>
                                     </div>
 
                                     <hr />
 
-                                    <h6 className="fw-bold mb-3">Selected Add-ons</h6>
+                                    <h5 className="fw-bold mb-3">Selected Add-ons</h5>
 
                                     {addOns
 
                                         .filter((addon) => selectedAddons.includes(addon.name))
 
                                         .map((addon) => (
-                                            <div className="d-flex justify-content-between mb-3" key={addon.name}>
-                                                <span>
+                                            <div className="d-flex justify-content-between mb-2" key={addon.name}>
+                                                <h6 className="mb-0" style={{ fontSize: "13px" }}>
                                                     <FaCheck className="text-lavender me-2" />
 
                                                     {addon.name}
-                                                </span>
-                                                <b>₹{addon.price}</b>
+                                                </h6>
+                                                <p className="mb-0" style={{ fontSize: "13px" }}>₹{addon.price}</p>
                                             </div>
 
                                         ))}
@@ -307,37 +308,36 @@ const Booking = () => {
                                     <hr />
 
                                     <div className="d-flex justify-content-between mb-3">
-                                        <span>Fragrance</span>
-                                        <b>{fragrance}</b>
+                                        <h6 className="mb-0" style={{ fontSize: "13px" }}>Fragrance</h6>
+                                        <p className="mb-0" style={{ fontSize: "13px" }}>{fragrance}</p>
                                     </div>
 
                                     <div className="d-flex justify-content-between mb-3">
-                                        <span>Plan</span>
-                                        <b>{plan}</b>
+                                        <h6 className="mb-0" style={{ fontSize: "13px" }}>Plan</h6>
+                                        <p className="mb-0" style={{ fontSize: "13px" }}>{plan}</p>
                                     </div>
 
                                     <div className="d-flex justify-content-between mb-4">
-                                        <span>Time Slot</span>
-                                        <b>{timeSlot}</b>
+                                        <h6 className="mb-0" style={{ fontSize: "13px" }}>Time Slot</h6>
+                                        <p className="mb-0" style={{ fontSize: "13px" }}>{timeSlot}</p>
                                     </div>
 
                                     <div className="p-3 rounded-4 total-box mb-3">
                                         <div className="d-flex justify-content-between align-items-center">
-                                            <h5 className="fw-bold mb-0">Total Amount</h5>
-                                            <h2 className="fw-bold mb-0">₹{total}</h2>
+                                            <h6 className="fw-bold mb-0">Total Amount</h6>
+                                            <h5 className="fw-bold mb-0">₹{total}</h5>
                                         </div>
                                     </div>
 
-                                    <button className="btn bg-lavender text-white rounded-pill w-100 py-3 fw-bold">
+                                    <button className="btn bg-lavender text-white rounded-pill w-100 py-2 fw-bold" style={{ fontSize: "13px" }}>
 
                                         Confirm Smart Booking →
                                     </button>
 
-                                    <p className="small text-muted text-center mt-3 mb-4">
+                                    <p className=" text-muted text-center my-3" style={{ fontSize: "13px" }}>
 
                                         🔒 Secure Booking • Live Tracking • Quality Service
                                     </p>
-
                                     <div className="row g-3 text-center">
 
                                         {[
@@ -353,8 +353,8 @@ const Booking = () => {
                                         ].map((item) => (
                                             <div className="col-6" key={item[0]}>
                                                 <div className="rounded-4 bg-light p-3 h-100">
-                                                    <div className="text-lavender fs-4">{item[1]}</div>
-                                                    <small className="fw-bold">{item[0]}</small>
+                                                    <div className="text-lavender fs-5">{item[1]}</div>
+                                                    <p className="fw-bold mb-0" style={{ fontSize: "13px" }}>{item[0]}</p>
                                                 </div>
                                             </div>
 
@@ -364,25 +364,23 @@ const Booking = () => {
                             </aside>
                         </div>
                     </div>
+                    <div className="row mt-3">
+                        {bottomFeatures.map((feature, index) => (
+                            <div className="col-12 col-sm-6 col-md-2" key={index}>
+                                <div className="card border-0 shadow-sm rounded-4 h-100">
+                                    <div className="card-body">
+                                        <div className="">
+                                            <p className="feature-icon rounded-3 d-flex justify-content-center align-items-center me-2">{feature[2]}</p>
 
-                    <div className="card border-0 shadow-sm rounded-4 mt-4">
-                        <div className="card-body">
-                            <div className="row g-3 text-center">
-
-                                {bottomFeatures.map((feature) => (
-                                    <div className="col-md" key={feature[0]}>
-                                        <div className="d-flex align-items-center justify-content-center gap-3">
-                                            <span className="feature-icon">{feature[2]}</span>
                                             <div className="text-start">
-                                                <div className="fw-bold">{feature[0]}</div>
-                                                <small className="text-muted">{feature[1]}</small>
+                                                <h6 className="fw-bold mb-0" style={{ fontSize: "15px" }}>{feature[0]}</h6>
+                                                <p className="mb-0" style={{ fontSize: "13px" }}>{feature[1]}</p>
                                             </div>
                                         </div>
                                     </div>
-
-                                ))}
+                                </div>
                             </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
